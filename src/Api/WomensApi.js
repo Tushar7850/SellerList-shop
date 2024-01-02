@@ -2,7 +2,7 @@ const allwomenswear ={
   ApiCategory:"WomensWear",
   ApiData:[
     {
-      indexno:1,
+      id:71,
       name:" Westside Lime Green Striped A-Line Kurta",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020086842_437Wx649H_202311150348471.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020086842_437Wx649H_202311150348462.jpeg',
@@ -18,7 +18,7 @@ const allwomenswear ={
       
      },
      {
-      indexno:2,
+      id:72,
       name:"W Coral Embroidered Straight Kurta",
       main_img:'https://img.tatacliq.com/images/i9/437Wx649H/MP000000016540961_437Wx649H_202302160000001.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i9/437Wx649H/MP000000016540961_437Wx649H_202302160000372.jpeg',
@@ -29,11 +29,11 @@ const allwomenswear ={
       old_price:"₹1899",
       price_off:"60% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.2,
 
      },
      {
-      indexno:3,
+      id:73,
       name:"Biba Blue Cotton Printed Straight Kurta",
       main_img:'https://img.tatacliq.com/images/i9/437Wx649H/MP000000016134763_437Wx649H_202301202255591.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i9/437Wx649H/MP000000016134763_437Wx649H_202301202256012.jpeg',
@@ -44,11 +44,11 @@ const allwomenswear ={
       old_price:"₹1999",
       price_off:"30% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.6,
 
      },
      {
-      indexno:4,
+      id:74,
       name:" Green Zardozi Embroidered Kurta ",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000019791007_437Wx649H_202310231115361.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000019791007_437Wx649H_202310231115372.jpeg',
@@ -59,11 +59,11 @@ const allwomenswear ={
       old_price:"",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.6,
 
      },
      {
-      indexno:5,
+      id:75,
       name:"Blue A Line Kurta With Shrug",
       main_img:'https://img.tatacliq.com/images/i7/437Wx649H/MP000000010827024_437Wx649H_202110070125011.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i7/437Wx649H/MP000000010827024_437Wx649H_202110070125432.jpeg',
@@ -74,11 +74,11 @@ const allwomenswear ={
       old_price:"₹3599",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.9,
 
      },
      {
-      indexno:6,
+      id:76,
       name:"Blue Embroidered Straight Kurta",
       main_img:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000013386113_437Wx649H_202206110947041.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000013386113_437Wx649H_202206110947072.jpeg',
@@ -89,11 +89,11 @@ const allwomenswear ={
       old_price:"₹2599",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:4.2,
 
      },
      {
-      indexno:7,
+      id:77,
       name:"W Yellow Printed A Line Kurta",
       main_img:'https://img.tatacliq.com/images/i10/437Wx649H/MP000000017354109_437Wx649H_202304260054111.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i10/437Wx649H/MP000000017354109_437Wx649H_202304260054072.jpeg',
@@ -104,11 +104,11 @@ const allwomenswear ={
       old_price:"₹1899",
       price_off:"35% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.8,
 
      },
      {
-      indexno:8,
+      id:78,
       name:" Maroon Embroidered Fit & Flare Kurta",
       main_img:'https://img.tatacliq.com/images/i7/437Wx649H/MP000000011683527_437Wx649H_202201061128371.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i7/437Wx649H/MP000000011683527_437Wx649H_202201061128382.jpeg',
@@ -119,11 +119,11 @@ const allwomenswear ={
       old_price:"₹3599",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.6,
 
      },
      {
-      indexno:9,
+      id:79,
       name:" Globus Maroon Embroidered Kurta",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020213002_437Wx649H_202311232032281.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020213002_437Wx649H_202311232032322.jpeg',
@@ -134,11 +134,11 @@ const allwomenswear ={
       old_price:"₹1699",
       price_off:"25% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.9,
 
      },
      {
-      indexno:10,
+      id:80,
       name:"Globus White & Blue Cotton Printed Kurta",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020212929_437Wx649H_202311232029551.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020212929_437Wx649H_202311232029592.jpeg',
@@ -149,11 +149,11 @@ const allwomenswear ={
       old_price:"₹1499",
       price_off:"25% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.1,
 
      },
      {
-      indexno:11,
+      id:81,
       name:" Pink Embroidered Straight Kurti",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020107108_437Wx649H_202311160500071.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020107108_437Wx649H_202311160500152.jpeg',
@@ -164,11 +164,11 @@ const allwomenswear ={
       old_price:"₹1999",
       price_off:"51% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.8,
 
      },
      {
-      indexno:12,
+      id:82,
       name:"Kurti Embroidered Straight Blue Kurta",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020118408_437Wx649H_202311172024581.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020118408_437Wx649H_202311172025032.jpeg',
@@ -179,11 +179,11 @@ const allwomenswear ={
       old_price:"₹3299",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.9,
 
      },
      {
-      indexno:13,
+      id:83,
       name:" Biba Beige Printed A Line Kurta",
       main_img:'https://img.tatacliq.com/images/i7/437Wx649H/MP000000009671821_437Wx649H_202105300510201.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i7/437Wx649H/MP000000009671821_437Wx649H_202105300510212.jpeg',
@@ -198,7 +198,7 @@ const allwomenswear ={
 
      },
      {
-      indexno:14,
+      id:84,
       name:"Olive Green Geometric Print Straight Kurta",
       main_img:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000014403962_437Wx649H_202209100520061.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000014403962_437Wx649H_202209100520072.jpeg',
@@ -209,11 +209,11 @@ const allwomenswear ={
       old_price:"₹1699",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.6,
 
      },
      {
-      indexno:15,
+      id:85,
       name:"W Green & Pink Printed A Line Kurta",
       main_img:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000014190806_437Wx649H_202208210000401.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000014190806_437Wx649H_202208210000422.jpeg',
@@ -224,12 +224,12 @@ const allwomenswear ={
       old_price:"₹1899",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.8,
 
     
      },
      {
-      indexno:16,
+      id:86,
       name:"Biba Green Cotton Printed Straight Kurta",
       main_img:'https://img.tatacliq.com/images/i11/437Wx649H/MP000000017856181_437Wx649H_202306072118331.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i11/437Wx649H/MP000000017856181_437Wx649H_202306072118362.jpeg',
@@ -240,11 +240,11 @@ const allwomenswear ={
       old_price:"₹1999",
       price_off:"40% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.4,
 
      },
      {
-      indexno:17,
+      id:87,
       name:" Jaipur Kurti Red Cotton Printed Angrakha Kurta",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020118418_437Wx649H_202311172025071.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020118418_437Wx649H_202311172025112.jpeg',
@@ -255,11 +255,11 @@ const allwomenswear ={
       old_price:"₹2599",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.9,
 
      },
      {
-      indexno:18,
+      id:88,
       name:" Purple Geometric Print Straight Kurta",
       main_img:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000014404246_437Wx649H_202209100552081.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i8/437Wx649H/MP000000014404246_437Wx649H_202209100552102.jpeg',
@@ -270,11 +270,11 @@ const allwomenswear ={
       old_price:"₹1799",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.8,
 
      },
      {
-      indexno:19,
+      id:89,
       name:" Aurelia Grey Cotton Printed Straight Kurta",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020200970_437Wx649H_202311230420181.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020200970_437Wx649H_202311230420212.jpeg',
@@ -285,11 +285,11 @@ const allwomenswear ={
       Stock:"Limited Stock!",
       price_off:"50% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:2.5,
 
      },
      {
-      indexno:20,
+      id:90,
       name:"Aurelia Off-White Straight Short Kurti",
       main_img:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020200968_437Wx649H_202311230420231.jpeg',
       item_img_1:'https://img.tatacliq.com/images/i14/437Wx649H/MP000000020200968_437Wx649H_202311230420202.jpeg',
@@ -300,7 +300,7 @@ const allwomenswear ={
       old_price:"₹1899",
       price_off:"60% Off",
      category:"Kurta",
-      rating:2.3,
+      rating:3.6,
 
      },
   ]

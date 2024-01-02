@@ -11,10 +11,10 @@ function Hero() {
   return (
     <div className="p-2 ">
       <div
-        className=" rounded-xl h-60  w-full bg-cover bg-center   text-center pt-10 mb-2 lg:h-[25rem]"
+        className=" rounded-xl h-60  w-full bg-cover bg-center   text-center pt-10 mb-2 lg:h-[30rem]"
         style={{ backgroundImage: `url(${hero_bg})` }}
       >
-        <h1 className="text-white font-bold text-xl mb-5 mx-7 lg:text-5xl lg:mt-10  ">
+        <h1 className="text-white font-bold text-xl mb-5 mx-7 lg:text-6xl lg:mt-10  ">
           Change your wardrobe. Find exciting goods.
         </h1>
         <div className="lg:flex lg:justify-center  ">

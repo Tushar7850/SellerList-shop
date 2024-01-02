@@ -10,37 +10,39 @@ export default function ProductShowComponent(props) {
     <div>
       <div className="pb-5 w-full ">
         
-        <div className=" mt-5 grid px-5  md:mt-10 lg:gap-3  grid-cols-2  md:grid-cols-3  lg:grid-cols-5   ">
+        <div className=" mt-5 grid gap-1 md:px-5  md:mt-10 lg:gap-3  grid-cols-2  md:grid-cols-3  lg:grid-cols-5   ">
         {props.items.map((curElem) => (
-        <div class="relative px-3 flex w-full mt-10 max-w-xs flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md ">
+        <div className="relative px-3 flex w-full mt-10 max-w-xs flex-col overflow-hidden rounded-xl border border-gray-100 bg-sky-3g00 shadow-md ">
           <div
-            class="relative  mt-3 flex h-70 overflow-hidden rounded-xl border "
+            className="relative  mt-3 flex h-52 md:h-auto overflow-hidden rounded-xl border "
            
           >
             <img
-              class="bg-cover w-full hover:scale-110 transition-all duration-300 "
+              className="bg-cover w-full hover:scale-110 transition-all duration-300 "
               src={curElem.main_img}
               alt="product"
             />
-            <span class="absolute top-0 left-0 m-2 rounded-full bg-cyan-700 px-2 py-0.5 text-center text-sm font-semibold text-white">
+            <span className="absolute top-0 left-0 m-2 rounded-full bg-cyan-700 px-2 py-0.5 text-center text-sm font-semibold text-white">
               {curElem.price_off}
             </span>
           </div>
-          <div class="mt-4 px-5 pb-5">
+          <div className="mt-4  md:px-5 pb-5">
             <div>
-              <h5 class="text-lg tracking-tight h-20 text-slate-900">
+              <h5 className=" md:text-lg lg:text-xl text-center tracking-tight h-20 text-slate-900">
                 {curElem.name}
               </h5>
             </div>
-            <div class="mt-2 mb-5 flex items-center justify-between">
+            <div className="mt-3 mb-5 flex flex-col lg:flex-row items-center justify-between ">
               <p className="space-x-1">
-                <span class="text-xl font-bold text-slate-900">₹{curElem.price}</span>
-                <span class="text-xs text-slate-900 line-through">{curElem.old_price}</span>
+                <span className=" text-lg md:text-xl font-bold text-slate-900">₹{curElem.price}</span>
+                <span className="text-xs text-slate-900 line-through">{curElem.old_price}</span>
+                <span className="text-xs text-red-500 ">{curElem.Stock}</span>
+                
               </p>
                
-              <div class="flex items-center">
+              <div className="flex items-center">
               <Rating name="read-only" sx={{fontSize:"0.8rem"}} value={curElem.rating} readOnly />
-          <span class="  rounded bg-yellow-200 px-2 py-0.5 text-[0.7rem] font-semibold">{curElem.rating}</span>
+          <span className="  rounded bg-yellow-200 px-2 py-0.5 text-[0.7rem] font-semibold">{curElem.rating}</span>
         </div>
             </div>
             <Link to={"/productdetails"} state={curElem}>
@@ -50,7 +52,7 @@ export default function ProductShowComponent(props) {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="mr-2 h-6 w-6"
+                className="mr-2 h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

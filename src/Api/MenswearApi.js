@@ -4,7 +4,7 @@ const Allmenswear =
   ApiCategory:"Menswear",
   ApiData:[
     {
-      indexno: 1,
+      id: 21,
       name: " Dark Olive Regular Fit Cotton Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854587_437Wx649H_202303151507211.jpeg",
@@ -22,7 +22,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 2,
+      id: 22,
       name: " Dusty Pink Regular Fit Cotton Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854452_437Wx649H_202303151502161.jpeg",
@@ -40,7 +40,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id: 23,
       name: " Olive Regular Fit Cotton Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854606_437Wx649H_202303151508201.jpeg",
@@ -58,7 +58,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id: 24,
       name: "  Black Full Sleeves Solid Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011285060_437Wx649H_202111280548251.jpeg",
@@ -76,7 +76,7 @@ const Allmenswear =
       category: "Jacket",
     },
     {
-      indexno: 4,
+      id: 25,
       name: " Westside Beige & Black Checked Slim Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i13/437Wx649H/MP000000019410648_437Wx649H_202309260147221.jpeg",
@@ -94,7 +94,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id:26,
       name: " Leather Retail Brown Full Sleeves Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011285012_437Wx649H_202111280546001.jpeg",
@@ -113,7 +113,7 @@ const Allmenswear =
     },
     
     {
-      indexno: 5,
+      id:27,
       name: "Westside White Zig Zag Printed Relaxed Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i14/437Wx649H/MP000000019563746_437Wx649H_202310081148081.jpeg",
@@ -132,7 +132,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 6,
+      id:28,
       name: " Light Yellow Fit Cotton Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854348_437Wx649H_202303151458131.jpeg",
@@ -150,7 +150,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id: 29,
       name: " Leather Retail Black Striped Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011284869_437Wx649H_202111280538181.jpeg",
@@ -169,7 +169,7 @@ const Allmenswear =
     },
    
     {
-      indexno: 7,
+      id: 30,
       name: " Navy Regular Fit Cotton Shirt",
       main_img:
         "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016361187_437Wx649H_202302032329031.jpeg",
@@ -187,7 +187,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 8,
+      id: 31,
       name: " WES Casuals by Westside White Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016701819_437Wx649H_202303141340591.jpeg",
@@ -206,7 +206,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id: 32,
       name: " Leather Retail Black Faux Leather Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011284957_437Wx649H_202111280543071.jpeg",
@@ -225,7 +225,7 @@ const Allmenswear =
     },
  
     {
-      indexno: 9,
+      id: 33,
       name: "Sutra Navy Solid Windcheater Bomber Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612662_437Wx649H_202112302141261.jpeg",
@@ -244,7 +244,7 @@ const Allmenswear =
       category: "Jacket",
     },
     {
-      indexno: 9,
+      id: 34,
       name: " White Cotton Slim Fit Printed Shirt",
       main_img:
         "https://img.tatacliq.com/images/i8/437Wx649H/MP000000013801964_437Wx649H_202207160616231.jpeg",
@@ -262,7 +262,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 10,
+      id: 35,
       name: " Benetton Blue Linen Slim Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017999211_437Wx649H_202306171934201.jpeg",
@@ -280,7 +280,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 11,
+      id: 36,
       name: "Arrow Rust Cotton Slim Fit Checks Shirt",
       main_img:
         "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016521121_437Wx649H_202302141654551.jpeg",
@@ -298,7 +298,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 12,
+      id: 37,
       name: "Allen Solly White Linen Slim Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i12/437Wx649H/MP000000018435761_437Wx649H_202307231752221.jpeg",
@@ -316,7 +316,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id: 38,
       name: " Duke Rust Full Sleeves Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011598309_437Wx649H_202112291745451.jpeg",
@@ -334,7 +334,7 @@ const Allmenswear =
       category: "Jacket",
     },
     {
-      indexno: 13,
+      id: 39,
       name: "Being Human Black Slim Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016907311_437Wx649H_202303181804201.jpeg",
@@ -352,7 +352,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 14,
+      id: 40,
       name: " Multicolor Slim Fit Striped Cotton Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000017193988_437Wx649H_202304132040141.jpeg",
@@ -371,7 +371,7 @@ const Allmenswear =
     },
     
     {
-      indexno: 15,
+      id: 41,
       name: "Maroon Cotton Regular Fit Checks Shirt",
       main_img:
         "https://img.tatacliq.com/images/i14/437Wx649H/MP000000019971943_437Wx649H_202311072351031.jpeg",
@@ -389,7 +389,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 16,
+      id: 42,
       name: " Blue Cotton Regular Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i14/437Wx649H/MP000000019972189_437Wx649H_202311080001091.jpeg",
@@ -407,7 +407,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id: 43,
       name: " Duke Brown Full Sleeves Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011598228_437Wx649H_202112291741321.jpeg",
@@ -425,7 +425,7 @@ const Allmenswear =
       category: "Jacket",
     },
     {
-      indexno: 17,
+      id: 44,
       name: " SHOWOFF Navy Blue Slim Fit Checks Shirt",
       main_img:
         "https://img.tatacliq.com/images/i14/437Wx649H/MP000000019827161_437Wx649H_202310271648411.jpeg",
@@ -443,7 +443,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 18,
+      id: 45,
       name: "Dark Green Regular Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191655_437Wx649H_202211060047171.jpeg",
@@ -461,7 +461,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 19,
+      id: 46,
       name: "Levi's Blue Relaxed Fit Floral Print Shirt",
       main_img:
         "https://img.tatacliq.com/images/i13/437Wx649H/MP000000019345428_437Wx649H_202309221412141.jpeg",
@@ -479,7 +479,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-      indexno: 3,
+      id: 47,
       name: "Campus Sutra Maroon Full Sleeves Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612517_437Wx649H_202112302132571.jpeg",
@@ -497,7 +497,7 @@ const Allmenswear =
       category: "Jacket",
     },
     {
-      indexno: 20,
+      id: 48,
       name: "Pepe Jeans KINGSMAN Aqua Regular Fit Linen Shirt",
       main_img:
         "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544161.jpeg",
@@ -515,7 +515,7 @@ const Allmenswear =
       category: "Shirt",
     },
     {
-        indexno: 21,
+        id: 49,
         name: "T-shirt",
         main_img:
           "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544161.jpeg",
@@ -533,7 +533,7 @@ const Allmenswear =
         category: "T-Shirt",
       },
       {
-        indexno: 22,
+        id: 50,
         name: "Pants",
         main_img:
           "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191655_437Wx649H_202211060047171.jpeg",
@@ -550,24 +550,7 @@ const Allmenswear =
         price_off: "80% Off",
         category: "Pants",
       },
-      {
-        indexno: 22,
-        name: "Sutra Navy & White Windcheater Bomber Jacket",
-        main_img:
-          "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612665_437Wx649H_202112302141261.jpeg",
-        item_img_1:
-          "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612665_437Wx649H_202112302141282.jpeg",
-        item_img_2:
-          "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612665_437Wx649H_202112302141293.jpeg",
-        item_img_3:
-          "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612665_437Wx649H_202112302141304.jpeg",
-        item_img_4:
-          "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612665_437Wx649H_202112302141325.jpeg",
-        price: 805,
-        old_price: "₹2299",
-        price_off: "65% Off",
-        category: "Jacket",
-      },
+      
     
   ]
 }

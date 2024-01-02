@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 // import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
@@ -11,6 +11,7 @@ import allwomenswear from '../../Api/WomensApi';
 import Allmenswear from '../../Api/MenswearApi';
 import AllKidsWear from '../../Api/kidswearApi';
 import Allshoes from '../../Api/ShoesApi';
+import { MyContext } from '../../App';
 
 
 
@@ -18,6 +19,8 @@ function Navbar ()  {
 
   const [isOpen, setOpen] = useState(false)
   const [slide,setslide] = useState(false)
+
+  const {cartItems} = useContext(MyContext)
 
    
   return (
@@ -67,7 +70,7 @@ function Navbar ()  {
              <Link to={"/cart"}>
              <div>
           
-             <Badge badgeContent={4} color="primary">
+             <Badge  badgeContent={cartItems.length === 0 ? "":cartItems.length} color="primary" >
              <ShoppingCartIcon/>
              </Badge>
              </div>

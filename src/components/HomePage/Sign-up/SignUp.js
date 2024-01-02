@@ -4,7 +4,7 @@ export default function SignUpPage() {
   return (
     <div>
        <div>
-      <div className="flex flex-wrap px-10">
+      <div className="flex flex-wrap px-5  ">
       <div className="pointer-events-none relative hidden h-screen select-none  md:block md:w-1/2 bg-white p-5">
     {/* <div className="absolute bottom-0 z-10 px-8 text-white opacity-100">
       <p className="mb-8 text-3xl font-semibold leading-10">We work 10x faster than our compeititors and stay consistant. While they're bogged won with techincal debt, we're realeasing new features.</p>
@@ -18,7 +18,7 @@ export default function SignUpPage() {
     <div className="flex justify-center pt-12 md:justify-start md:pl-12">
       <h1 className="text-2xl font-bold text-blue-600"> SellerList . </h1>
     </div>
-    <div className="my-auto mx-auto flex flex-col justify-center px-6 pt-8 md:justify-start lg:w-[28rem]">
+    <div className="my-auto mx-auto flex flex-col justify-center md:px-6 pt-8 md:justify-start lg:w-[28rem]">
       <p className="text-center text-3xl font-bold md:text-left md:leading-tight">Create your free account</p>
       <p className="mt-6 text-center font-medium md:text-left">
         Already using wobble?

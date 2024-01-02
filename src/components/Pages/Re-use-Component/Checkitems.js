@@ -1,36 +1,24 @@
-import React from "react";
-//
+import React, { useContext } from "react";
+
 import { FaShopify } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 import { HiCash } from "react-icons/hi";
 import { GiReturnArrow } from "react-icons/gi";
 import Rating from '@mui/material/Rating';
-import { useLocation, useNavigate} from "react-router-dom";
-import Swal from 'sweetalert2'
+import {  useLocation , Link} from "react-router-dom";
+import {MyContext} from '../../../App'
+
 
 export default function Checkitems() {
 
   // 
   const location = useLocation()
   const selectedProduct = location.state
-  
-  // 
- const Navigate= useNavigate()
-// 
-const AddToCart=(selectedProduct)=>{
-  
-  Swal.fire({
-    title: "Item Added To cart !",
-    text: "Go To Cart",
-    icon: "success"
-  });
 
-  Navigate(`/cart`,{state:{selectedProduct}})
 
-  
+      const {handleAddProduct} = useContext(MyContext) ;
   
 
-}
 
  
   return (
@@ -186,12 +174,12 @@ const AddToCart=(selectedProduct)=>{
             <hr className="mt-2 " />
             {/*  */}
             <div className="flex justify-end lg:mr-14">
-              <button className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
-              onClick={()=>AddToCart(selectedProduct)}
+              <Link to={"/cart"}><button className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              onClick={()=>handleAddProduct(selectedProduct)}
 
               >
                 Add to cart <FaShopify />
-              </button >
+              </button ></Link>
             </div>
           </div>
         </div>
