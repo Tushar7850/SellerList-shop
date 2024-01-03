@@ -19,7 +19,9 @@ const Allmenswear =
       price: 679,
       old_price: "₹3399",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
+     
     },
     {
       id: 22,
@@ -37,7 +39,8 @@ const Allmenswear =
       price: 679,
       old_price: "₹3399",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 23,
@@ -55,7 +58,8 @@ const Allmenswear =
       price: 719,
       old_price: "₹3599",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 24,
@@ -73,7 +77,9 @@ const Allmenswear =
       price: 2399,
       old_price: "₹3999",
       price_off: "40% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
+     
     },
     {
       id: 25,
@@ -91,7 +97,8 @@ const Allmenswear =
       price: 1499,
       old_price: "₹2999",
       price_off: "50% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id:26,
@@ -109,7 +116,8 @@ const Allmenswear =
       price: 2699,
       old_price: "₹3999",
       price_off: "33% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
     },
     
     {
@@ -129,7 +137,8 @@ const Allmenswear =
       old_price: "",
       Stock: "Limited Stock!",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id:28,
@@ -147,7 +156,8 @@ const Allmenswear =
       price: 679,
       old_price: "₹3399",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 29,
@@ -165,7 +175,8 @@ const Allmenswear =
       price: 2399,
       old_price: "₹3999",
       price_off: "40% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
     },
    
     {
@@ -184,7 +195,8 @@ const Allmenswear =
       price: 679,
       old_price: "₹3399",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 31,
@@ -203,7 +215,8 @@ const Allmenswear =
       old_price: "",
       Stock: "Limited Stock!!",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 32,
@@ -221,7 +234,8 @@ const Allmenswear =
       price: 2099,
       old_price: "₹3999",
       price_off: "48% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
     },
  
     {
@@ -241,7 +255,8 @@ const Allmenswear =
       old_price: "₹1999",
       Stock: "",
       price_off: "60% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
     },
     {
       id: 34,
@@ -259,7 +274,8 @@ const Allmenswear =
       price: 679,
       old_price: "₹3399",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 35,
@@ -277,7 +293,8 @@ const Allmenswear =
       price: 1859,
       old_price: "₹2999",
       price_off: "38% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 36,
@@ -295,7 +312,8 @@ const Allmenswear =
       price: 1428,
       old_price: "₹2599",
       price_off: "45% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 37,
@@ -313,7 +331,8 @@ const Allmenswear =
       price: 3044,
       old_price: "₹3499",
       price_off: "13% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 38,
@@ -331,7 +350,8 @@ const Allmenswear =
       price: 1299,
       old_price: "₹2599",
       price_off: "50% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
     },
     {
       id: 39,
@@ -349,7 +369,8 @@ const Allmenswear =
       price: 895,
       old_price: "₹2799",
       price_off: "68% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 40,
@@ -367,7 +388,8 @@ const Allmenswear =
       price: 1996,
       old_price: "₹2495",
       price_off: "20% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     
     {
@@ -386,7 +408,8 @@ const Allmenswear =
       price: 3199,
       Stock: "Limited Stock!",
       price_off: "60% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 42,
@@ -404,7 +427,8 @@ const Allmenswear =
       price: 2999,
       Stock: "Limited Stock!",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 43,
@@ -422,7 +446,8 @@ const Allmenswear =
       price: 2639,
       old_price: "₹4399",
       price_off: "40% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
     },
     {
       id: 44,
@@ -440,7 +465,8 @@ const Allmenswear =
       price: 952,
       old_price: "₹2380",
       price_off: "60% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 45,
@@ -458,7 +484,8 @@ const Allmenswear =
       price: 1839,
       old_price: "₹2299",
       price_off: "20% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 46,
@@ -476,7 +503,8 @@ const Allmenswear =
       price: 2319,
       old_price: "₹2899",
       price_off: "20% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
       id: 47,
@@ -494,7 +522,8 @@ const Allmenswear =
       price: 1400,
       old_price: "₹3999",
       price_off: "65% Off",
-      category: "Jacket",
+     category: "Jacket",
+      rating:2.9,
     },
     {
       id: 48,
@@ -512,7 +541,8 @@ const Allmenswear =
       price: 679,
       old_price: "₹3399",
       price_off: "80% Off",
-      category: "Shirt",
+     category: "Shirt",
+      rating:2.9,
     },
     {
         id: 49,

@@ -66,7 +66,7 @@ export default function Checkitems() {
               <div className="flex gap-3">
                 <h2 className="font-bold text-2xl mt-2 text-black">₹{selectedProduct.price}</h2>
                 <div className="bg-blue-100 border-2 px-1 w-2/6  lg:w-1/6 text-center rounded-lg mt-2 ">
-                  <h2 className="text-lg  "> {selectedProduct.price_off}</h2>
+                  <h2 className="text-lg "> {selectedProduct.price_off}</h2>
                 </div>
               </div>
               {/*  */}
@@ -174,7 +174,7 @@ export default function Checkitems() {
             <hr className="mt-2 " />
             {/*  */}
             <div className="flex justify-end lg:mr-14">
-              <Link to={"/cart"}><button className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              <Link to={'/'}><button className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
               onClick={()=>handleAddProduct(selectedProduct)}
 
               >

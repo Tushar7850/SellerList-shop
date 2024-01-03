@@ -26,15 +26,25 @@ import ScrollToTop from "../components/Assets/ScrollToTop/ScrollToTop";
 import Checkitems from "../components/Pages/Re-use-Component/Checkitems";
 import Page404 from "../Page404/Page404";
 import Cart from "../components/Cart/Cart";
-import SignUpPage from "../components/HomePage/Sign-up/SignUp";
+import SignUpPage from "../components/Sign-up/SignUp";
+import ContactUs from '../components/footer/ContactUs';
+// 
+
 
 function Routingpage() {
+
+
+  
+  
+
+
   return (
     <div>
          {/*  */}
       <ScrollToTop/>
    {/*  */}
      <Navbar/>
+     
      
      <Routes>
       <Route path="/" element={ <Home/>}/>
@@ -56,6 +66,7 @@ function Routingpage() {
       <Route path="/aboutus" element={<AboutUs/>}/>
       <Route path="/Privacy-policy" element={<PrivacyPolicy/>}/>
       <Route path="/careers" element={<Careers/>}/>
+      <Route path="/contactus" element={<ContactUs/>}/>
      </Routes>
      
      <Footer/>

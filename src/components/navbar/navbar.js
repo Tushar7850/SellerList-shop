@@ -1,4 +1,4 @@
-import React,{useContext, useState} from 'react'
+import React,{useContext, useState,useEffect} from 'react'
 // import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
@@ -12,6 +12,13 @@ import Allmenswear from '../../Api/MenswearApi';
 import AllKidsWear from '../../Api/kidswearApi';
 import Allshoes from '../../Api/ShoesApi';
 import { MyContext } from '../../App';
+// 
+// import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '../../Firebase.congif';
+import Admin from '../AdminPage/Admin';
+
+
+
 
 
 
@@ -21,6 +28,20 @@ function Navbar ()  {
   const [slide,setslide] = useState(false)
 
   const {cartItems} = useContext(MyContext)
+
+  // 
+
+  const [user, setUser] = useState(false)
+
+
+  useEffect(() => {
+    const unSubscibe = auth.onAuthStateChanged((user)=>{
+      setUser(user)
+    })
+    return ()=> unSubscibe()
+  }, [])
+
+
 
    
   return (
@@ -33,8 +54,21 @@ function Navbar ()  {
            </div>
 
             <div className='h-12 shadow-2xl flex items-center  '>
-                 <button className='border rounded-full px-4 py-1.5 text-base mr-2 hover:text-white hover:bg-black '><Link to={"/sign-up"}>Signup</Link></button>
-                 <button className= ' border bg-black text-white rounded-full text-base  px-4 py-1.5 mr-2  hover:text-black hover:bg-white '><Link to={"/login"}>Login</Link></button>
+               {
+      !user ?(<div>
+
+        <button className='border rounded-full px-4 py-1.5 text-base mr-2 hover:text-white hover:bg-black '><Link to={"/sign-up"}>Signup</Link></button>
+        <button className= ' border bg-black text-white rounded-full text-base  px-4 py-1.5 mr-2  hover:text-black hover:bg-white '><Link to={"/login"}>Login</Link></button>
+      </div>
+        ):(
+          <Admin user={user}/>
+          
+        )
+      
+     }
+
+                 
+                 
             </div>
 
         </nav>
