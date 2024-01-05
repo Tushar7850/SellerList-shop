@@ -10,6 +10,8 @@ export const MyContext = createContext()
 function App() {
 
 
+      
+
   const [cartItems,setCartItems] =useState([])
 
   const handleAddProduct=(product)=>{
