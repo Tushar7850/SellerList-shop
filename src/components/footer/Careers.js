@@ -13,9 +13,9 @@ export default function Careers() {
 Working with us means staying ahead of trends and moving quickly in a unique and fast-paced environment, in one of a variety of challenging and fulfilling roles.
 
 We are constantly looking for talented individuals who will help us take our business to the next level, and keep us at the forefront of the digital domain. 
-Explore job opportunities with us -<span className='text-blue-500 underline'>https://jobs.lever.co/tataunistore</span> </p>
+Explore job opportunities with us -<span className='text-blue-500 underline'>https://jobs.lever.co/SellerList</span> </p>
         {/*  */}
-        <p>Tata UniStore Limited (‘TUL’) owns and operates an online e-commerce portal under the brand names of TATA CLiQ and TATA CLiQ Luxury and accessible through web (www.tatacliq.com and www.luxury.tatacliq.com) and mobile application of TATA CLiQ and TATA CLiQ Luxury.</p>
+        <p>SellerList UniStore Limited (‘TUL’) owns and operates an online e-commerce portal under the brand names of SellerList CLiQ and SellerList CLiQ Luxury and accessible through web (www.SellerList.com and www.luxury.tSellerList.com) and mobile application of SellerList CLiQ and SellerList CLiQ Luxury.</p>
 
         {/*  */}
         <p>TUL is part of the Tata group which is a global enterprise headquartered in India, and comprises more than 100 operating companies, with operations in more than 100 countries across six continents, employing more than 6,50,000 people worldwide. Being an emerging and evolving business, TUL actively hires talent from the market and information regarding any job vacancies is disseminated through official channels only.</p>

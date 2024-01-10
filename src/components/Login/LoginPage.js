@@ -58,8 +58,8 @@ export default function LoginPage() {
       <div className="pointer-events-none relative hidden h-screen select-none  md:block md:w-1/2 bg-white p-5">
     <img className="-z-1 absolute top-0 h-full w-full bg-cover"  alt="logo" src="https://i.postimg.cc/JhTPfBGY/Ecommerce-web-page-bro.png" />
   </div>
-  <div className="flex w-full flex-col md:w-6/12">
-    <div className="flex justify-center pt-12 md:-mb-24 md:justify-start md:pl-12">
+  <div className="flex w-screen  flex-col   md:w-6/12">
+    <div className="flex justify-center  pt-12 md:-mb-24 md:justify-start md:pl-12">
       <h1 className="border-b-gray-700 border-b-4 pb-2 text-2xl font-bold text-gray-900"> SellerList. </h1>
     </div>
     <div className="lg:w-[28rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">

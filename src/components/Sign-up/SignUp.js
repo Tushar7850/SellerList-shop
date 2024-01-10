@@ -74,11 +74,11 @@ export default function SignUpPage() {
   return (
     <div>
        <div>
-      <div className="flex flex-wrap px-5  ">
+      <div className="flex flex-wrap px-10  ">
       <div className="pointer-events-none relative hidden h-screen select-none  md:block md:w-1/2 bg-white p-5">
     <img className="-z-1 absolute top-0 h-full w-full bg-cover" src="https://i.postimg.cc/TP2tNcYW/Ecommerce-web-page-cuate.png" alt='logo' />
   </div>
-  <div className="flex w-full flex-col md:w-1/2">
+  <div className="flex w-full flex-col mb-6 md:w-1/2">
     <div className="flex justify-center pt-12 md:justify-start md:pl-12">
       <h1 className="text-2xl font-bold text-blue-600"> SellerList . </h1>
     </div>
