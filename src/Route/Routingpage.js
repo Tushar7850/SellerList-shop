@@ -28,6 +28,7 @@ import Page404 from "../Page404/Page404";
 import Cart from "../components/Cart/Cart";
 import SignUpPage from "../components/Sign-up/SignUp";
 import ContactUs from '../components/footer/ContactUs';
+import TermsAndCondition from '../components/footer/TermsAndCondition';
 // 
 
 
@@ -67,6 +68,7 @@ function Routingpage() {
       <Route path="/Privacy-policy" element={<PrivacyPolicy/>}/>
       <Route path="/careers" element={<Careers/>}/>
       <Route path="/contactus" element={<ContactUs/>}/>
+      <Route path="/TermsAndCondition" element={<TermsAndCondition/>}/>
      </Routes>
      
      <Footer/>

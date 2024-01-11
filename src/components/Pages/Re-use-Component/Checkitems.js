@@ -5,7 +5,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { HiCash } from "react-icons/hi";
 import { GiReturnArrow } from "react-icons/gi";
 import Rating from '@mui/material/Rating';
-import {  useLocation , Link} from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import {MyContext} from '../../../App'
 
 
@@ -174,12 +174,12 @@ export default function Checkitems() {
             <hr className="mt-2 " />
             {/*  */}
             <div className="flex justify-end lg:mr-14">
-              <Link to={'/'}><button className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              <button className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
               onClick={()=>handleAddProduct(selectedProduct)}
 
               >
                 Add to cart <FaShopify />
-              </button ></Link>
+              </button >
             </div>
           </div>
         </div>

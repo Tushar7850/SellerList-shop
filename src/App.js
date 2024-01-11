@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import Routingpage from "./Route/Routingpage";
  import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
 
 
 export const MyContext = createContext()
@@ -8,13 +9,14 @@ export const MyContext = createContext()
 
 
 function App() {
-
+  const Navigate = useNavigate()
 
       
 
   const [cartItems,setCartItems] =useState([])
 
   const handleAddProduct=(product)=>{
+   
   
           const ProductEXist = cartItems.find((item) => item.id === product.id) ;
       
@@ -28,7 +30,10 @@ function App() {
                 text: "Go To Cart",
                 icon: "success"
               });
+
               
+              
+              Navigate(-1)
           }
         }
       

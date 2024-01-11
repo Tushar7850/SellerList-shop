@@ -107,7 +107,10 @@ function Footer() {
             <div className="pl-10   ">
               <ul>
                 <li className="cursor-pointer hover:text-zinc-600">
+                  <Link to={"/TermsAndCondition"}>
                   Terms and Condition
+
+                  </Link>
                 </li>
                 <li className="cursor-pointer hover:text-zinc-600">
                   {" "}
@@ -121,9 +124,14 @@ function Footer() {
 
         <div className="mt-5 flex justify-end lg:items-end  mb-2">
           <div>
-            <h4 className="text-xl text-black font-bold ml-4 ">Follow us </h4>
+            <h4 className="text-xl text-black font-bold ml-4 ">Follow Me  </h4>
+            <h6 className="text-sm ml-4">Tushar Sawant</h6>
             <div className="flex space-x-2 mt-2 mb-2 cursor-pointer">
+
+            <Link to={'https://www.instagram.com/tushar_sawant_25/'}>
+
               <InstagramIcon sx={{ color: "red" }} fontSize="large" />
+            </Link>
               <FacebookIcon sx={{ color: blue[600] }} fontSize="large" />
               <TwitterIcon sx={{ color: blue[400] }} fontSize="large" />
             </div>

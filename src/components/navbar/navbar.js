@@ -45,7 +45,7 @@ function Navbar ()  {
 
    
   return (
-    <div className='w-full sticky top-0 left-0 z-50 transition-all  ' >
+    <div className='w-full  z-50 transition-all ' >
           {/* MAIN NAV-BAR */}
         <nav className='flex justify-between shadow  w-screen bg-white relative lg:pr-5 '> 
           <div className='m-2 flex space-x-3'>
