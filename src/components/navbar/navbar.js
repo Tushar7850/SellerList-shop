@@ -11,11 +11,11 @@ import allwomenswear from '../../Api/WomensApi';
 import Allmenswear from '../../Api/MenswearApi';
 import AllKidsWear from '../../Api/kidswearApi';
 import Allshoes from '../../Api/ShoesApi';
-import { MyContext } from '../../App';
 // 
 // import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../../Firebase.congif';
 import Admin from '../AdminPage/Admin';
+import { CardContext } from '../../Context/CardContext/CardContext';
 
 
 
@@ -27,7 +27,7 @@ function Navbar ()  {
   const [isOpen, setOpen] = useState(false)
   const [slide,setslide] = useState(false)
 
-  const {cartItems} = useContext(MyContext)
+  const {cartItems} = useContext(CardContext)
 
   // 
 
@@ -45,7 +45,7 @@ function Navbar ()  {
 
    
   return (
-    <div className='w-full  z-50 transition-all ' >
+    <div className='w-full sticky top-0 left-0  z-50 transition-all ' >
           {/* MAIN NAV-BAR */}
         <nav className='flex justify-between shadow  w-screen bg-white relative lg:pr-5 '> 
           <div className='m-2 flex space-x-3'>

@@ -1,11 +1,12 @@
 import React, {  useContext } from 'react'   
-import {MyContext} from '../../App'
+import { CardContext } from '../../Context/CardContext/CardContext';
+
 
 
 
 export default function Cart() {
 
-    const {cartItems,haddleRemoveProduct,handleAddProduct,removeUniqueProduct} = useContext(MyContext)
+    const {cartItems,haddleRemoveProduct,handleAddProduct,removeUniqueProduct} = useContext(CardContext)
 
 
     const totalPrice = cartItems.reduce(

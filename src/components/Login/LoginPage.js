@@ -6,7 +6,10 @@ import{signInWithPopup} from 'firebase/auth'
 import { useNavigate ,Link } from 'react-router-dom';
 // 
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';  
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { toast } from 'react-toastify';
+
+// 
 
 
 export default function LoginPage() {
@@ -23,30 +26,37 @@ export default function LoginPage() {
 
   const handleLogin= async(e)=>{
     e.preventDefault()
-    try {
+    
+     try {
       const userCredential = await signInWithEmailAndPassword(auth,email,password)
       console.log(userCredential.user);
-
+      toast.success("Login Sucessful")
       Navigate("/")
       
     } catch (error) {
       setNotify("Email or Password is wrong")
+      toast.error("Email or Password is wrong")
       console.log(error);
       
     }
   }
+
+
   const handleSignInWithGoogle = async(e)=>{
+   
     try{
       const userCredential = await signInWithPopup(auth, googleAuthProvider)
       console.log(userCredential.user)
+      
       Navigate("/")
+
     }
     catch (error) {
       setNotify("no found")
       console.log(error);
-
       
     }
+    
   }
 
 
@@ -94,6 +104,7 @@ export default function LoginPage() {
   </div>
  
 </div>
+
 
 
       

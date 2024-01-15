@@ -11,14 +11,16 @@ import Avatar from "@mui/material/Avatar";
 
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-
-
 // 
+import {  toast } from 'react-toastify';
+
 
 function Admin({user}) {
     const logout =()=>{
-        auth.signOut()
-        alert("logout user")
+      auth.signOut()
+      toast.success('Logout sucees !', {
+        position: toast.POSITION.TOP_RIGHT
+    });
     }
 
     
@@ -84,6 +86,7 @@ function Admin({user}) {
 
           </Menu>
         </div>
+        
     </div>
   )
 }
