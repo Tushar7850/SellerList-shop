@@ -4,14 +4,50 @@ import { Link } from 'react-router-dom'
 export default function PageNotFound() {
   return (
     <div className='flex justify-center items-centerm p-20 flex-col text-center'>
-      <div>
-      <h1 className='text-3xl font-bold '> 😜 Page Not Found 😜</h1>
-      <p className="mt-6 text-lg">The page you are looking for doesn&apos;t exist. You may have mist
-      typed the URL or the page may have moved.</p>
+      <div class="py-10">
+  <div class="text-center">
+    <p class="text-base font-semibold text-black">404</p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-black sm:text-5xl">
+      Page not found
+    </h1>
+    <p class="mt-4 text-base leading-7 text-gray-600">
+      Sorry, we couldn't find the page you &#x27;re looking for.
+    </p>
+    <div class="mt-4 flex items-center justify-center gap-x-3">
+    <Link to={"/"}>
+    <button
+        type="button"
+        
+        class="inline-flex items-center rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="mr-2"
+        >
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+       Home Page
+      </button></Link> 
+      <button
+        type="button"
+        class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+      >
+        Contact us
+      </button>
+    </div>
+  </div>
+</div>
 
-      <Link to={"/"}><p className='underline underline-offset-2 text-blue-500 p-2'> ← Go TO HOME PAGE</p></Link>
-      
-      </div>
+     
       
     </div>
   )

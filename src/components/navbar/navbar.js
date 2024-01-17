@@ -4,7 +4,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 // ------------
 import { FaShopify } from "react-icons/fa"
-import { Link  } from 'react-router-dom';
+import { Link, useLocation  } from 'react-router-dom';
 // 
 import Hamburger from 'hamburger-react'
 import allwomenswear from '../../Api/WomensApi';
@@ -33,6 +33,13 @@ function Navbar ()  {
 
   const [user, setUser] = useState(false)
 
+  // 
+
+
+    const {pathname} =useLocation()
+    console.log(pathname);
+   
+
 
   useEffect(() => {
     const unSubscibe = auth.onAuthStateChanged((user)=>{
@@ -48,12 +55,12 @@ function Navbar ()  {
     <div className='w-full sticky top-0 left-0  z-50 transition-all ' >
           {/* MAIN NAV-BAR */}
         <nav className='flex justify-between shadow  w-screen bg-white relative lg:pr-5 '> 
-          <div className='m-2 flex space-x-3'>
-              <h1 className='text-2xl'>SellerList</h1>
-              <FaShopify className='text-3xl'/>
+          <div className='m-2 flex  md:space-x-3'>
+              <h1 className=' text-xl md:text-3xl'>SellerList</h1>
+              <FaShopify className='text-2xl md:text-3xl'/>
            </div>
 
-            <div className='h-12 shadow-2xl flex items-center  '>
+            <div className='h-12  flex items-center  '>
                {
       !user ?(<div>
 
@@ -74,6 +81,10 @@ function Navbar ()  {
         </nav>
 
         {/* SECOND NAV-BAR  */}
+
+        <div className={pathname === '/dashboard' ? 'hidden' : 'block'}>
+
+
         <nav className='shadow-md h-12 text-sky-800 pr-1 bg-white w-screen flex justify-between items-center  lg:pr-5 '>
              
              <div className=' '>
@@ -111,7 +122,7 @@ function Navbar ()  {
              </Link>
       </div>
         </nav>
-       
+        </div>
     </div>
   )
 }

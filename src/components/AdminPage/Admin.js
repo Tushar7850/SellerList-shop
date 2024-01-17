@@ -12,15 +12,14 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // 
-import {  toast } from 'react-toastify';
+import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 
 function Admin({user}) {
     const logout =()=>{
       auth.signOut()
-      toast.success('Logout sucees !', {
-        position: toast.POSITION.TOP_RIGHT
-    });
+      toast.success('Logout sucees !');
     }
 
     
@@ -42,10 +41,10 @@ function Admin({user}) {
     <div>
         
       
-      <div>
+      <div className='bg-transparent'>
           <Tooltip title="Open settings">
           
-            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <IconButton onClick={handleOpenUserMenu} sx={{ p: 2 }}>
             <h1>{user.email}</h1>
               <Avatar alt="Remy Sharp" src="https://i.postimg.cc/d0p1ZKPT/7074311-3551739.jpg" />
             </IconButton>
@@ -66,11 +65,7 @@ function Admin({user}) {
             open={Boolean(anchorElUser)}
             onClose={handleCloseUserMenu}
           >
-            {/* {settings.map((setting) => (
-              <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                <Typography textAlign="center" onClick={logout}>{setting}</Typography>
-              </MenuItem>
-            ))} */}
+           
             <MenuItem  onClick={handleCloseUserMenu}>
                 <Typography textAlign="center" >Profile</Typography>
               </MenuItem>
@@ -78,7 +73,7 @@ function Admin({user}) {
                 <Typography textAlign="center" >Account</Typography>
               </MenuItem>
               <MenuItem  onClick={handleCloseUserMenu}>
-                <Typography textAlign="center" >Dashboard</Typography>
+              <Link to={'/dashboard'}>  <Typography textAlign="center" >Dashboard</Typography></Link>
               </MenuItem>
               <MenuItem  onClick={handleCloseUserMenu}>
                 <Typography textAlign="center" onClick={logout}>Logout</Typography>

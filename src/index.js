@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
+import{ Toaster } from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 import CardContextProvider from './Context/CardContext/CardContext';
 
@@ -17,15 +17,15 @@ import CardContextProvider from './Context/CardContext/CardContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-    <CardContextProvider>
-
+    
     <BrowserRouter>
+    <CardContextProvider>
    <App/>
-    <ToastContainer/>
+   <Toaster/>
      
-    </BrowserRouter>
     
     </CardContextProvider>
+    </BrowserRouter>
     
   
 );

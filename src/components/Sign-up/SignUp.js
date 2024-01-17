@@ -10,6 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 // 
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import toast from 'react-hot-toast';
 
 
 export default function SignUpPage() {
@@ -49,6 +50,7 @@ export default function SignUpPage() {
         
       } catch (error) {
         setNotify("Email or Password is wrong")
+        toast.error("Email or Password is wrong")
       console.log(error);
         
       }

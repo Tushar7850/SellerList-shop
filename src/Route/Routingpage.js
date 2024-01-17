@@ -29,6 +29,7 @@ import Cart from "../components/Cart/Cart";
 import SignUpPage from "../components/Sign-up/SignUp";
 import ContactUs from '../components/footer/ContactUs';
 import TermsAndCondition from '../components/footer/TermsAndCondition';
+import DashBoard from '../components/AdminPage/DashBoard';
 // 
 
 
@@ -69,6 +70,8 @@ function Routingpage() {
       <Route path="/careers" element={<Careers/>}/>
       <Route path="/contactus" element={<ContactUs/>}/>
       <Route path="/TermsAndCondition" element={<TermsAndCondition/>}/>
+      <Route path="/dashboard" element={<DashBoard/>}/>
+      
      </Routes>
      
      <Footer/>
