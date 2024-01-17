@@ -13,13 +13,19 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // 
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function Admin({user}) {
+
+
+  const Navigate=useNavigate()
+  // 
     const logout =()=>{
       auth.signOut()
       toast.success('Logout sucees !');
+      Navigate('/')
+      
     }
 
     

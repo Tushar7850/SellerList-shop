@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="w-full overflow-hidden">
   <Routingpage/>
-   
       
     </div>
   );

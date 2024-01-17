@@ -91,8 +91,10 @@ function Footer() {
                   <Link to={"./aboutus"}>About Us</Link>
                 </li>
                 <li className="cursor-pointer hover:text-zinc-600">
-                  {" "}
+                  <Link to={"/customerService"}>
+
                   Customer service
+                  </Link>
                 </li>
                 <li className="cursor-pointer hover:text-zinc-600">
                   <Link to={"./careers"}>Careers</Link>
