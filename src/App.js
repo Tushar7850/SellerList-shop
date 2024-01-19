@@ -1,5 +1,8 @@
 
+import { useEffect, useState } from "react";
 import Routingpage from "./Route/Routingpage";
+import Spinner from "./components/Spinner/Spinner";
+
 
 
 
@@ -8,12 +11,25 @@ import Routingpage from "./Route/Routingpage";
 
 
 function App() {
-
+  
+  const [loading,setLoading]= useState(true)
+  
+  
+  useEffect(()=>{
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000)
+  },[])
  
 
   return (
     <div className="w-full overflow-hidden">
-  <Routingpage/>
+      {
+        loading ? (<Spinner/>):( <Routingpage/>)
+
+      }
+      
+
       
     </div>
   );

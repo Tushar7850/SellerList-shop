@@ -21,6 +21,7 @@ export default function ProductShowComponent(props) {
               className="bg-cover w-full hover:scale-110 transition-all duration-300 "
               src={curElem.main_img}
               alt="product"
+              loading="lazy"
             />
             <span className="absolute top-0 left-0 m-2 rounded-full bg-cyan-700 px-2 py-0.5 text-center text-sm font-semibold text-white">
               {curElem.price_off}

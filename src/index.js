@@ -22,8 +22,6 @@ root.render(
     <CardContextProvider>
    <App/>
    <Toaster/>
-     
-    
     </CardContextProvider>
     </BrowserRouter>
     
