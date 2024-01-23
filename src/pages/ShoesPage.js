@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import AllmenswearApi from "../MenWear/MenswearApi";
-import ProductShowComponent from "./Re-use-Component/ProductShowComponent";
-import FilterNavbar from "./Re-use-Component/CategoryFilterNavbar";
+import ProductShowComponent from "../components/Re-use-Component/ProductShowComponent";
+import FilterNavbar from "../components/Re-use-Component/CategoryFilterNavbar";
 
  
 
@@ -10,8 +10,11 @@ import FilterNavbar from "./Re-use-Component/CategoryFilterNavbar";
 
 
 
-export default function MensPage({ProductApi}) {
+export default function ShoesPage({ProductApi}) {
   
+
+ 
+
 
   const [ShopitemData, setShopitemData] = useState(ProductApi.ApiData);
     

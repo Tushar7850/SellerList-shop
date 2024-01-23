@@ -1,4 +1,4 @@
-import React,{useContext, useState,useEffect} from 'react'
+import React,{useContext, useState} from 'react'
 // import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
@@ -13,9 +13,10 @@ import AllKidsWear from '../../Api/kidswearApi';
 import Allshoes from '../../Api/ShoesApi';
 // 
 // import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '../../Firebase.congif';
-import Admin from '../AdminPage/Admin';
+
+import Admin from '../../pages/AdminPage/Admin';
 import { CardContext } from '../../Context/CardContext/CardContext';
+import { AdminContext } from '../../Context/AdminContext/AdminContext';
 
 
 
@@ -27,11 +28,14 @@ function Navbar ()  {
   const [isOpen, setOpen] = useState(false)
   const [slide,setslide] = useState(false)
 
-  const {cartItems} = useContext(CardContext)
-
   // 
+  const {cartItems} = useContext(CardContext)
+  
+  
+  // 
+  const {user} = useContext(AdminContext)
 
-  const [user, setUser] = useState(false)
+
 
   // 
 
@@ -41,12 +45,6 @@ function Navbar ()  {
    
 
 
-  useEffect(() => {
-    const unSubscibe = auth.onAuthStateChanged((user)=>{
-      setUser(user)
-    })
-    return ()=> unSubscibe()
-  }, [])
 
 
 
@@ -82,7 +80,7 @@ function Navbar ()  {
 
         {/* SECOND NAV-BAR  */}
 
-        <div className={pathname === '/dashboard' ? 'hidden' : 'block'}>
+        <div className={pathname === '/Account' ? 'hidden' : 'block'}>
 
 
         <nav className='shadow-md h-12 text-sky-800 pr-1 bg-white w-screen flex justify-between items-center  lg:pr-5 '>

@@ -46,10 +46,10 @@ function CustomerService() {
   ];
 
   return (
-    <div className=" w-full flex justify-center items-center bg-zinc-300 ">
+    <div className=" w-full flex justify-center items-center bg-gray-100 ">
 
    
-    <div className="  bg-zinc-100 w-10/12 m-10 lg:m-20  ">
+    <div className="  bg-white w-10/12 m-10 lg:m-20  ">
       {
         QuestionAnswers.map((item)=>(
             <div className={showAnswer === item.id ? "bg-zinc-50 pt-10 px-20":"pt-10 px-20"}>

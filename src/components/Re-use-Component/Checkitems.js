@@ -6,7 +6,7 @@ import { HiCash } from "react-icons/hi";
 import { GiReturnArrow } from "react-icons/gi";
 import Rating from "@mui/material/Rating";
 import {  useLocation, useNavigate } from "react-router-dom";
-import { CardContext } from "../../../Context/CardContext/CardContext";
+import { CardContext } from "../../Context/CardContext/CardContext";
 
 export default function Checkitems() {
   //

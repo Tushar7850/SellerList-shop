@@ -8,6 +8,7 @@ function CardContextProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
   const handleAddProduct = (product) => {
+    
     const ProductEXist = cartItems.find((item) => item.id === product.id);
 
     if (ProductEXist) {

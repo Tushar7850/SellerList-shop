@@ -11,7 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import toast from 'react-hot-toast';
-import Spinner from '../Spinner/Spinner';
+import Spinner from '../../components/Spinner/Spinner';
 
 
 export default function SignUpPage() {
@@ -100,7 +100,7 @@ export default function SignUpPage() {
         <div className=" mx-auto flex flex-col justify-center md:px-6 pt-8 md:justify-start lg:w-[28rem]">
           <p className="text-center text-3xl font-bold md:text-left md:leading-tight">Create your free account </p>
           <p className="mt-6 text-center font-medium md:text-left">
-            Already using wobble?
+            Already using SellerList?
             <span className="whitespace-nowrap font-semibold text-blue-700 cursor-pointer"> <Link to={"/login"}> Login here</Link></span>
           </p>
           <button onClick={handleSignInWithGoogle} className="-2 mt-8 flex items-center justify-center rounded-md border px-4 py-1 outline-none ring-gray-400 ring-offset-2 transition hover:border-transparent hover:bg-black hover:text-white focus:ring-2"><img className="mr-2 h-5" src="https://static.cdnlogo.com/logos/g/35/google-icon.svg" alt="logo" /> Get started with Google</button>
@@ -110,22 +110,22 @@ export default function SignUpPage() {
           <form onSubmit={HandleFormSubmit} className="flex flex-col items-stretch pt-3 md:pt-8">
             <div className="flex flex-col pt-4">
               <div className="relative flex overflow-hidden rounded-md border-2 transition focus-within:border-blue-600">
-                <input type="text" id="login-name" onChange={(e)=>setName(e.target.value)} value={name} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Name" />
+                <input type="text" id="login-name" required onChange={(e)=>setName(e.target.value)} value={name} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Name" />
               </div>
             </div>
             <div className="flex flex-col pt-4">
               <div className="relative flex overflow-hidden rounded-md border-2 transition focus-within:border-blue-600">
-                <input type="email" id="login-email"  onChange={(e)=>setEmail(e.target.value)} value={email} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Email" />
+                <input type="email" id="login-email" required  onChange={(e)=>setEmail(e.target.value)} value={email} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Email" />
               </div>
             </div>
             <div className="mb-4 flex flex-col pt-4">
               <div className="relative flex overflow-hidden  rounded-md border-2 transition focus-within:border-blue-600">
-                <input type={showPassword ? "password" :"text"} id="login-password" onChange={(e)=>setPassword(e.target.value)} value={password} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Password (minimum 8 characters)" />
+                <input type={showPassword ? "password" :"text"} required id="login-password" onChange={(e)=>setPassword(e.target.value)} value={password} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Password (minimum 8 characters)" />
                 <button type='button' className='pr-2' onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <VisibilityIcon/> :<VisibilityOffIcon/>}</button>
               </div>
             </div>
             <div className="block">
-              <input className="mr-2 h-5 w-5  rounded border border-gray-300 bg-contain bg-no-repeat align-top text-black shadow checked:bg-blue-600 checked:text-white focus:border-blue-600 focus:shadow" type="checkbox" id="remember-me"  />
+              <input className="mr-2 h-5 w-5  rounded border border-gray-300 bg-contain bg-no-repeat align-top text-black shadow checked:bg-blue-600 checked:text-white focus:border-blue-600 focus:shadow" required type="checkbox" id="remember-me"  />
               <label className="inline-block" for="remember-me"> I agree to the <span className="underline">Terms and Conditions</span></label>
             </div>
             <button type="submit" className="mt-6 rounded-lg bg-blue-600 px-4 py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-32">Sign in</button>

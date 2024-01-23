@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import{ Toaster } from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 import CardContextProvider from './Context/CardContext/CardContext';
+import AdminContextProvider from './Context/AdminContext/AdminContext';
 
  
 
@@ -19,10 +20,12 @@ root.render(
   
     
     <BrowserRouter>
-    <CardContextProvider>
+   <AdminContextProvider>
+     <CardContextProvider>
    <App/>
    <Toaster/>
     </CardContextProvider>
+    </AdminContextProvider>   
     </BrowserRouter>
     
   

@@ -10,7 +10,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import toast from 'react-hot-toast';
 
 //
-import Spinner from '../Spinner/Spinner';
+import Spinner from '../../components/Spinner/Spinner';
  
 
 

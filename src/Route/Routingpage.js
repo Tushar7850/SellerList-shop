@@ -7,30 +7,31 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/navbar/navbar"
 // 
 import Footer from "../components/footer/Footer";
-import AboutUs from "../components/footer/AboutUs";
-import PrivacyPolicy from "../components/footer/PrivacyPolicy";
-import Careers from "../components/footer/Careers";
-import LoginPage from "../components/Login/LoginPage";
+import AboutUs from "../pages/FooterPages/AboutUs";
+import PrivacyPolicy from "../pages/FooterPages/PrivacyPolicy";
+import Careers from "../pages/FooterPages/Careers";
+import LoginPage from "../pages/RegisterPages/LoginPage";
+import SignUpPage from "../pages/RegisterPages/SignUp";
 // 
 import Allmenswear from "../Api/MenswearApi";
 import allwomenswear from "../Api/WomensApi";
 import AllKidsWear from '../Api/kidswearApi'
 import Allshoes from "../Api/ShoesApi";
 // 
-import ShoesPage from "../components/Pages/ShoesPage";
-import Womenspage from "../components/Pages/WomensPage";
-import KidsPage from "../components/Pages/KidsPage";
-import MansPage from "../components/Pages/MensPage";
-import Home   from "../components/HomePage/Home";
-import ScrollToTop from "../components/Assets/ScrollToTop/ScrollToTop";
-import Checkitems from "../components/Pages/Re-use-Component/Checkitems";
-import Page404 from "../Page404/Page404";
-import Cart from "../components/Cart/Cart";
-import SignUpPage from "../components/Sign-up/SignUp";
-import ContactUs from '../components/footer/ContactUs';
-import TermsAndCondition from '../components/footer/TermsAndCondition';
-import DashBoard from '../components/AdminPage/DashBoard';
-import CustomerService from '../components/footer/CustomerService';
+import ShoesPage from ".././pages/ShoesPage";
+import Womenspage from ".././pages/WomensPage";
+import KidsPage from ".././pages/KidsPage";
+import MansPage from ".././pages/MensPage";
+import Home   from "../pages/HomePage/Home";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import Checkitems from "../components/Re-use-Component/Checkitems";
+import Page404 from "../pages/Page404/Page404";
+import Cart from ".././pages/Cart/Cart";
+import ContactUs from '../pages/FooterPages/ContactUs';
+import TermsAndCondition from '../pages/FooterPages/TermsAndCondition';
+import Profile from '../pages/AdminPage/Profile';
+import CustomerService from '../pages/FooterPages/CustomerService';
+import Account from '../pages/AdminPage/AccountPage';
 // 
 
 
@@ -72,7 +73,8 @@ function Routingpage() {
       <Route path="/contactus" element={<ContactUs/>}/>
       <Route path="/TermsAndCondition" element={<TermsAndCondition/>}/>
       <Route path="/customerService" element={<CustomerService/>}/>
-      <Route path="/dashboard" element={<DashBoard/>}/>
+      <Route path="/Profile" element={<Profile/>}/>
+      <Route path="/Account" element={<Account/>}/>
       
      </Routes>
      

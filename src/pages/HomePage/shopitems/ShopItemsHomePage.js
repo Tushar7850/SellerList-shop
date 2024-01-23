@@ -1,10 +1,10 @@
 import React from "react";
 // ----------------------------------
 import { FaHeart, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import AllKidsWear from "../../Api/kidswearApi";
-import allwomenswear from "../../Api/WomensApi";
-import Allshoes from "../../Api/ShoesApi";
-import Allmenswear from "../../Api/MenswearApi";
+import AllKidsWear from "../../../Api/kidswearApi";
+import allwomenswear from "../../../Api/WomensApi";
+import Allshoes from "../../../Api/ShoesApi";
+import Allmenswear from "../../../Api/MenswearApi";
 // ------------------------
 
 function ShopItemsHomePage() {
