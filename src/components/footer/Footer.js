@@ -52,7 +52,10 @@ function Footer() {
               </h4>
               <ul>
                 <li className="cursor-pointer hover:text-zinc-600">
+                <Link to={'/login'}>
+
                   Create a profile
+</Link>
                 </li>
                 <li className="cursor-pointer hover:text-zinc-600">
                   Set up payment type
@@ -67,6 +70,7 @@ function Footer() {
               </h4>
               <ul>
                 <li className="cursor-pointer hover:text-zinc-600  ">
+                 
                   Create a profile
                 </li>
                 <li className="cursor-pointer hover:text-zinc-600  ">
@@ -130,7 +134,7 @@ function Footer() {
             <h6 className="text-sm ml-4">Tushar Sawant</h6>
             <div className="flex space-x-2 mt-2 mb-2 cursor-pointer">
 
-            <Link to={'https://www.instagram.com/tushar_sawant_25/'}>
+            <Link to={'https://www.instagram.com/tushar_sawant_25/'} target="_Blank">
 
               <InstagramIcon sx={{ color: "red" }} fontSize="large" />
             </Link>

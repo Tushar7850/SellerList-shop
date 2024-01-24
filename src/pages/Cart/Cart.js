@@ -60,7 +60,7 @@ export default function Cart() {
                  <div class="sm:col-gap-5 sm:grid sm:grid-cols-2">
                    <div class="pr-8 sm:pr-5">
                      <p class="text-base font-semibold text-gray-900">{item?.name}</p>
-                     <p class="mx-0 mt-1 mb-0 text-sm text-gray-400">{item.category}</p>
+                     <p class="mx-0 mt-1 mb-0 text-sm text-gray-400">{item.size}</p>
                    </div>
 
                    <div class="mt-4 flex items-end justify-between sm:mt-0 sm:items-start sm:justify-end">

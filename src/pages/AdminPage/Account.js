@@ -30,13 +30,13 @@ function Account() {
           <label for="login-password">
             <span className="text-sm text-gray-500">Current Password</span>
             <div className="relative flex overflow-hidden rounded-md border-2 transition focus-within:border-cyan-400">
-              <input type={showPassword ? "password" :"text"} id="login-password" className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="***********" />
+              <input type={showPassword ? "password" :"text"} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="***********" />
             </div>
           </label>
           <label for="login-password">
             <span className="text-sm text-gray-500">New Password</span>
             <div className="relative flex overflow-hidden rounded-md border-2 transition focus-within:border-cyan-400">
-              <input type={showPassword ? "password" :"text"} id="login-password" className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="***********" />
+              <input type={showPassword ? "password" :"text"}  className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="***********" />
             </div>
           </label>
         </div>

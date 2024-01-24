@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import { FaShopify } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -13,7 +13,17 @@ export default function Checkitems() {
   const location = useLocation();
   const selectedProduct = location.state;
 
+    const [uniqueProduct,setUniqueProduct] =useState(selectedProduct)
   const { handleAddProduct } = useContext(CardContext);
+
+
+
+  const Sizes = ['S','M','L','XL','XXL']
+
+ const SizeAdd = (size) =>{
+      setUniqueProduct({...uniqueProduct,"size":size})
+ }
+
 
   const Navigate =useNavigate()
 
@@ -27,26 +37,26 @@ export default function Checkitems() {
           <div className="flex py-2  h-full lg:ml-5 ">
             {/* IMAGE__1  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={selectedProduct.main_img} alt="" />
+              <img src={uniqueProduct.main_img} alt="" />
             </div>
             {/* IMAGE__2  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={selectedProduct.item_img_1} alt="" />
+              <img src={uniqueProduct.item_img_1} alt="" />
             </div>
           </div>
 
           <div className="flex  h-full lg:h-[250px]">
             {/* IMAGE__3  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={selectedProduct.item_img_2} alt="" />
+              <img src={uniqueProduct.item_img_2} alt="" />
             </div>
             {/* IMAGE__4  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={selectedProduct.item_img_3} alt="" />
+              <img src={uniqueProduct.item_img_3} alt="" />
             </div>
             {/* IMAGE__5  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={selectedProduct.item_img_4} alt="" />
+              <img src={uniqueProduct.item_img_4} alt="" />
             </div>
           </div>
         </div>
@@ -55,15 +65,15 @@ export default function Checkitems() {
           {/* -----Product Details----- */}
           <div>
             <h2 className="text-xl lg:text-3xl font-semibold text-zinc-800 ">
-              {selectedProduct.name}
+              {uniqueProduct.name}
             </h2>
             {/*  */}
             <div className="flex gap-3">
               <h2 className="font-bold text-2xl mt-2 text-black">
-                ₹{selectedProduct.price}
+                ₹{uniqueProduct.price}
               </h2>
               <div className="bg-blue-100 border-2 px-1 w-2/6  lg:w-1/6 text-center rounded-lg mt-2 ">
-                <h2 className="text-lg "> {selectedProduct.price_off}</h2>
+                <h2 className="text-lg "> {uniqueProduct.price_off}</h2>
               </div>
             </div>
             {/*  */}
@@ -71,20 +81,20 @@ export default function Checkitems() {
               {" "}
               MRP:
               <span className="line-through ">
-                {selectedProduct.old_price ? selectedProduct.old_price : null}
+                {uniqueProduct.old_price ? uniqueProduct.old_price : null}
               </span>{" "}
             </h2>
 
-            <h2 className="text-red-600 mt-2 ">{selectedProduct.Stock}</h2>
+            <h2 className="text-red-600 mt-2 ">{uniqueProduct.Stock}</h2>
             <div class="flex items-center">
               <Rating
                 name="read-only"
                 sx={{ fontSize: "0.8rem" }}
-                value={selectedProduct.rating}
+                value={uniqueProduct.rating}
                 readOnly
               />
               <span class="  rounded bg-yellow-200 px-2 py-0.5 text-[0.7rem] font-semibold">
-                {selectedProduct.rating}
+                {uniqueProduct.rating}
               </span>
             </div>
             <h4>Inclusive of all taxes</h4>
@@ -99,11 +109,13 @@ export default function Checkitems() {
             </h2>
 
             <div className="space-x-2 ">
-              <button className="border rounded-lg h-12 w-12">S</button>
-              <button className="border rounded-lg h-12 w-12">M</button>
-              <button className="border rounded-lg h-12 w-12">L</button>
-              <button className="border rounded-lg h-12 w-12">XL</button>
-              <button className="border rounded-lg h-12 w-12">XXl</button>
+              {
+                Sizes.map((item)=>(
+
+                  <button className={item === uniqueProduct.size ? "border rounded-lg h-12 w-12 bg-black text-white" : "border rounded-lg h-12 w-12"} onClick={()=>SizeAdd(item)}>{item}</button>
+                ))
+              }
+            
             </div>
           </div>
           <hr className="mt-2 " />
@@ -185,7 +197,7 @@ export default function Checkitems() {
           <div className="flex justify-end lg:mr-14" onClick={()=>Navigate(-1)}>
             <button
               className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
-              onClick={() => handleAddProduct(selectedProduct)}
+              onClick={() => handleAddProduct(uniqueProduct)}
             >
               Add to cart <FaShopify />
             </button>
