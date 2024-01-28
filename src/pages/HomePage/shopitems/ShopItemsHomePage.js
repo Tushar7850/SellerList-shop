@@ -15,18 +15,18 @@ function ShopItemsHomePage() {
     ...allwomenswear.ApiData,
   ];
   // console.log(NewListProduct);
-  const NewListProduct = [];
+  const NewListProduct = [ AllProductItem[10],AllProductItem[14],AllProductItem[20],AllProductItem[25]];
 
-  for (let i = 0; i < 4; i++) {
-    const RandomNumber = Math.floor(Math.random() * 60);
-    if (!NewListProduct[RandomNumber]) {
-      let ProductItem = AllProductItem[RandomNumber];
+  // for (let i = 0; i < 4; i++) {
+  //   const RandomNumber = Math.floor(Math.random() * 60 + 1);
+  //   if (!NewListProduct[RandomNumber]) {
+  //     let ProductItem = AllProductItem[RandomNumber];
 
-      NewListProduct.push(ProductItem);
-    }
+  //     NewListProduct.push(ProductItem);
+  //   }
 
-  }
-console.log(NewListProduct);
+  // }
+// console.log(NewListProduct);
   return (
     <div className="px-4 mt-2">
       <div className="flex justify-between items-center">
@@ -42,7 +42,7 @@ console.log(NewListProduct);
         {NewListProduct.map((item, i) => (
           <div key={i}>
             <div className="p-2 ">
-              <div className="overflow-hidden h-4/6 rounded-2xl ">
+              <div className="overflow-hidden h-4/6 rounded-2xl border">
                 <img
                   src={item.main_img}
                   alt="items"

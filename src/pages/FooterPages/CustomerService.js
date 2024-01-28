@@ -49,17 +49,17 @@ function CustomerService() {
     <div className=" w-full flex justify-center items-center bg-gray-100 ">
 
    
-    <div className="  bg-white w-10/12 m-10 lg:m-20  ">
+    <div className="  bg-white w-11/12 md:w-10/12 md:m-10 lg:m-20  ">
       {
         QuestionAnswers.map((item)=>(
-            <div className={showAnswer === item.id ? "bg-zinc-50 pt-10 px-20":"pt-10 px-20"}>
+            <div className={showAnswer === item.id ? "bg-zinc-50 pt-10 px-4 md:px-20":"pt-10 px-4 md:px-20"}>
                 <div className="flex justify-between gap-x-5">
 
           <div>
 
-                <h2 className = {  showAnswer === item.id ?"text-lg font-bold ":"cursor-pointer"} onClick={()=>setShowAnswer(item.id)}>{item.Question}</h2>
+                <h2 className = {  showAnswer === item.id ?"md:text-lg font-bold ":"cursor-pointer"} onClick={()=>setShowAnswer(item.id)}>{item.Question}</h2>
                 {
-                    showAnswer === item.id ? ( <p className="mt-2">{item.Answers}</p>):(null)
+                    showAnswer === item.id ? ( <p className="mt-2 ">{item.Answers}</p>):(null)
                 }
                
             </div>

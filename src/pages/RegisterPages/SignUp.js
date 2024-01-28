@@ -24,7 +24,7 @@ export default function SignUpPage() {
     // 
     const [notify, setNotify]= useState('')
     // 
-    const [showPassword,setShowPassword] = useState(true)
+    const [showPassword,setShowPassword] = useState(false)
     // .
     const [loading,setLoading] = useState(false)
 
@@ -53,9 +53,9 @@ export default function SignUpPage() {
         Navigate("/")
         
       } catch (error) {
-        setNotify("Email or Password is wrong")
+        setNotify("An error occurred. Please try again later.");
         toast.error("Email or Password is wrong")
-      console.log(error);
+        console.error("Sign-up error:", error);
         
       }
       setLoading(false)
@@ -70,8 +70,8 @@ export default function SignUpPage() {
         Navigate("/")
       }
       catch (error) {
-        setNotify("no found")
-        console.log(error);
+       setNotify("An error occurred while signing in with Google.");
+      console.error("Google sign-in error:", error);
   
         
       }
@@ -120,7 +120,7 @@ export default function SignUpPage() {
             </div>
             <div className="mb-4 flex flex-col pt-4">
               <div className="relative flex overflow-hidden  rounded-md border-2 transition focus-within:border-blue-600">
-                <input type={showPassword ? "password" :"text"} required id="login-password" onChange={(e)=>setPassword(e.target.value)} value={password} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Password (minimum 8 characters)" />
+                <input type={showPassword ? "text" :"password"} required id="login-password" onChange={(e)=>setPassword(e.target.value)} value={password} className="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Password (minimum 8 characters)" />
                 <button type='button' className='pr-2' onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <VisibilityIcon/> :<VisibilityOffIcon/>}</button>
               </div>
             </div>

@@ -9,10 +9,8 @@ function Accountpage() {
    
 
   return (
-   
 
-
-     <main>
+    <main>
      
 
 <div className=" mt-5 mx-4 min-h-screen max-w-screen-2xl sm:mx-8 xl:mx-auto">
@@ -30,8 +28,8 @@ function Accountpage() {
           fill="none"
           stroke="currentColor"
           stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           class="mr-2"
         >
           <line x1="19" y1="12" x2="5" y2="12"></line>

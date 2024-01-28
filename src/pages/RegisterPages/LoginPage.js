@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { auth , googleAuthProvider } from '../../Firebase.congif';
 import{signInWithEmailAndPassword} from 'firebase/auth'
 import{signInWithPopup} from 'firebase/auth'
@@ -11,6 +11,7 @@ import toast from 'react-hot-toast';
 
 //
 import Spinner from '../../components/Spinner/Spinner';
+import { AdminContext } from '../../Context/AdminContext/AdminContext';
  
 
 
@@ -27,6 +28,9 @@ export default function LoginPage() {
   const Navigate =useNavigate()
 
 
+  const {setUserlogin} = useContext(AdminContext)
+
+
   const handleLogin= async(e)=>{
     e.preventDefault()
     setLoading(true)
@@ -35,6 +39,7 @@ export default function LoginPage() {
       const userCredential = await signInWithEmailAndPassword(auth,email,password)
       console.log(userCredential.user);
       toast.success("Login Sucessful")
+      setUserlogin(true)
       Navigate("/")
       
     } catch (error) {
@@ -52,7 +57,7 @@ export default function LoginPage() {
     try{
       const userCredential = await signInWithPopup(auth, googleAuthProvider)
       console.log(userCredential.user)
-      
+      setUserlogin(true)
       Navigate("/")
 
     }
@@ -74,7 +79,7 @@ export default function LoginPage() {
         loading ? (
           <Spinner/>
         ) :(
-          <div className="flex flex-wrap px-10">
+          <div className="flex flex-wrap px-5 md:px-10">
           <div className="pointer-events-none relative hidden h-screen select-none  md:block md:w-1/2 bg-white p-5">
         <img className="-z-1 absolute top-0 h-full w-full bg-cover"  alt="logo" src="https://i.postimg.cc/JhTPfBGY/Ecommerce-web-page-bro.png" />
       </div>
@@ -98,7 +103,7 @@ export default function LoginPage() {
             <div className="mb-12 flex flex-col pt-4">
               <div className="focus-within:border-b-gray-500 relative flex overflow-hidden border-b-2 transition">
                 <input type={showPassword ? "password" :"text"} id="login-password" onChange={(e)=>setPassword(e.target.value)} value={password} className="w-full flex-1 appearance-none border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Password" />
-                <button type='button' className='pr-2' onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <VisibilityIcon/> :<VisibilityOffIcon/>}</button>
+                <button type='button' className='pr-2' onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <VisibilityOffIcon/>:<VisibilityIcon/> }</button>
               </div>
             </div>
             <button type="submit"   className="w-full rounded-lg bg-gray-900 px-4 py-2 text-center text-base font-semibold text-white shadow-md ring-gray-500 ring-offset-2 transition focus:ring-2">Log in</button>

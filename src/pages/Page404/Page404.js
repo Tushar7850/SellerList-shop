@@ -28,8 +28,8 @@ export default function PageNotFound() {
           fill="none"
           stroke="currentColor"
           stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           class="mr-2"
         >
           <line x1="19" y1="12" x2="5" y2="12"></line>

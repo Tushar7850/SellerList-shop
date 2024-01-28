@@ -10,7 +10,7 @@ export const AdminContext = createContext();
 
 function AdminContextProvider({ children }) {
 
-
+const [userLogin,setUserlogin]= useState(false)
     const [user, setUser] = useState(false)
 
     const Navigate=useNavigate()
@@ -21,6 +21,7 @@ function AdminContextProvider({ children }) {
   useEffect(() => {
     const unSubscibe = auth.onAuthStateChanged((user)=>{
       setUser(user)
+     
     })
     return ()=> unSubscibe()
   }, [])
@@ -30,14 +31,16 @@ function AdminContextProvider({ children }) {
         auth.signOut()
         toast.success('Logout sucees !');
         Navigate('/')
+        setUserlogin(false)
         
       }
  
   const value = {
     logout,
-    user
-
-
+    user,
+    userLogin,
+    setUserlogin
+  
   };
 
   return (
