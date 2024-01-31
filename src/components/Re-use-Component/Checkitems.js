@@ -5,7 +5,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { HiCash } from "react-icons/hi";
 import { GiReturnArrow } from "react-icons/gi";
 import Rating from "@mui/material/Rating";
-import {  useLocation, useNavigate } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import { CardContext } from "../../Context/CardContext/CardContext";
 
 export default function Checkitems() {
@@ -21,11 +21,12 @@ export default function Checkitems() {
   const Sizes = ['S','M','L','XL','XXL']
 
  const SizeAdd = (size) =>{
+  
       setUniqueProduct({...uniqueProduct,"size":size})
  }
 
 
-  const Navigate =useNavigate()
+  
 
   return (
     <div className="px-5 mt-5 w-screen pb-10">
@@ -194,7 +195,7 @@ export default function Checkitems() {
           {/*  */}
           <hr className="mt-2 " />
           {/*  */}
-          <div className="flex justify-end lg:mr-14" onClick={()=>Navigate(-1)}>
+          <div className="flex justify-end lg:mr-14">
             <button
               className="flex  gap-4 items-center  justify-center rounded-md bg-cyan-500 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
               onClick={() => handleAddProduct(uniqueProduct)}

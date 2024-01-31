@@ -27,6 +27,7 @@ import TermsAndCondition from '../pages/FooterPages/TermsAndCondition';
 import Profile from '../pages/AdminPage/Profile';
 import CustomerService from '../pages/FooterPages/CustomerService';
 import Account from '../pages/AdminPage/AccountPage';
+import Checkoutpage from '../pages/Checkout/Checkoutpage';
 
 function Routingpage() {
   return (
@@ -35,7 +36,7 @@ function Routingpage() {
       <ScrollToTop/>
 
       {/* Navbar */}
-      <div className='mb-24'>
+      <div className='mb-24 md:mb-28'>
         <Navbar/>
       </div>
 
@@ -54,6 +55,7 @@ function Routingpage() {
         {/* Other routes */}
         <Route path="/productdetails" element={<Checkitems/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/checkoutpage" element={<Checkoutpage/>}/>
 
         {/* Footer routes */}
         <Route path="/aboutus" element={<AboutUs/>}/>

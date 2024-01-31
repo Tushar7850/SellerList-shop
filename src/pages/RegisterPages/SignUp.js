@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 // 
 import { auth, googleAuthProvider  } from '../../Firebase.congif'
 import {createUserWithEmailAndPassword} from'firebase/auth'
@@ -12,6 +12,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import toast from 'react-hot-toast';
 import Spinner from '../../components/Spinner/Spinner';
+
 
 
 export default function SignUpPage() {
@@ -30,6 +31,8 @@ export default function SignUpPage() {
 
 
     const Navigate= useNavigate()
+
+  
    
 
 
@@ -46,10 +49,13 @@ export default function SignUpPage() {
           text: "Your Account Has been created !",
           icon: "success"
         });
-
+        
+      
+        // 
         setEmail("")
         setName("")
         setPassword("")
+        // 
         Navigate("/")
         
       } catch (error) {
@@ -68,6 +74,7 @@ export default function SignUpPage() {
         const userCredential = await signInWithPopup(auth, googleAuthProvider)
         console.log(userCredential.user)
         Navigate("/")
+
       }
       catch (error) {
        setNotify("An error occurred while signing in with Google.");

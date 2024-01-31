@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { auth , googleAuthProvider } from '../../Firebase.congif';
 import{signInWithEmailAndPassword} from 'firebase/auth'
 import{signInWithPopup} from 'firebase/auth'
@@ -11,7 +11,7 @@ import toast from 'react-hot-toast';
 
 //
 import Spinner from '../../components/Spinner/Spinner';
-import { AdminContext } from '../../Context/AdminContext/AdminContext';
+
  
 
 
@@ -28,7 +28,7 @@ export default function LoginPage() {
   const Navigate =useNavigate()
 
 
-  const {setUserlogin} = useContext(AdminContext)
+  
 
 
   const handleLogin= async(e)=>{
@@ -39,7 +39,7 @@ export default function LoginPage() {
       const userCredential = await signInWithEmailAndPassword(auth,email,password)
       console.log(userCredential.user);
       toast.success("Login Sucessful")
-      setUserlogin(true)
+   
       Navigate("/")
       
     } catch (error) {
@@ -57,7 +57,7 @@ export default function LoginPage() {
     try{
       const userCredential = await signInWithPopup(auth, googleAuthProvider)
       console.log(userCredential.user)
-      setUserlogin(true)
+    
       Navigate("/")
 
     }

@@ -1,35 +1,30 @@
 import React, {  useContext } from 'react'   
 import { CardContext } from '../../Context/CardContext/CardContext';
 import { AdminContext } from '../../Context/AdminContext/AdminContext';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 
 
 
 export default function Cart() {
-  // const Navigate = useNavigate()
+  const Navigate = useNavigate()
 
- const {userLogin} = useContext(AdminContext) 
+ const {user} = useContext(AdminContext) 
 
-    const {cartItems,haddleRemoveProduct,handleAddProduct,removeUniqueProduct} = useContext(CardContext)
+    const {cartItems,haddleRemoveProduct,handleAddProduct,removeUniqueProduct,CarttotalPrice,TotalShippingChrges} = useContext(CardContext)
 
 
-    const totalPrice = cartItems.reduce(
-      (price, item) => price + item.quantity * item.price, 0
-    );
+   
 
-    let Shipping = 0
-
-    if (cartItems.length>0) {
-      Shipping = 40
-      
-    } ;
+    
+    
 
 
     const CheckOut =()=>{
-      if (userLogin) {
+      if (user) {
         toast.success("checkout success")
+        Navigate('/checkoutpage')
       } else {
         toast.error("Login First")
        
@@ -117,16 +112,16 @@ export default function Cart() {
           <div className="mt-6 border-t border-b py-2">
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-400">Subtotal</p>
-              <p className="text-lg font-semibold text-gray-900">₹{totalPrice}</p>
+              <p className="text-lg font-semibold text-gray-900">₹{CarttotalPrice}</p>
             </div>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-400">Shipping</p>
-              <p className="text-lg font-semibold text-gray-900">₹{Shipping*cartItems.length}</p>
+              <p className="text-lg font-semibold text-gray-900">₹{ TotalShippingChrges}</p>
             </div>
           </div>
           <div className="mt-6 flex items-center justify-between">
             <p className="text-sm font-medium text-gray-900">Total</p>
-            <p className="text-2xl font-semibold text-gray-900"><span className="text-xs font-normal text-gray-400">INR</span> {totalPrice + Shipping}</p>
+            <p className="text-2xl font-semibold text-gray-900"><span className="text-xs font-normal text-gray-400">INR</span> {CarttotalPrice + TotalShippingChrges}</p>
           </div>
 
           <div

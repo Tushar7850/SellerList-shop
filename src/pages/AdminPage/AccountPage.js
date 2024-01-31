@@ -13,7 +13,7 @@ function Accountpage() {
     <main>
      
 
-<div className=" mt-5 mx-4 min-h-screen max-w-screen-2xl sm:mx-8 xl:mx-auto">
+<div className=" mx-4 min-h-screen max-w-screen-xl sm:mx-8 xl:mx-auto">
 <Link to={"/"}>
     <button
         type="button"
@@ -39,7 +39,7 @@ function Accountpage() {
       </button></Link> 
   
   <h1 className="border-b py-6 text-4xl font-semibold">Settings</h1>
-  <div className="grid grid-cols-8 pt-3 sm:grid-cols-10">
+  <div className="grid grid-cols-8 pt-3  sm:grid-cols-10">
      
   <div className="col-span-2 hidden sm:block">
      <AccountNavbar/>
