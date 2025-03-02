@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* --------------slider-container--------------- */
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+}
