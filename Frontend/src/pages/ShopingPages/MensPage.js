@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import AllmenswearApi from "../MenWear/MenswearApi";
-import ProductShowComponent from "../components/Re-use-Component/ProductShowComponent";
-import FilterNavbar from "../components/Re-use-Component/CategoryFilterNavbar";
+import ProductShowComponent from "../../components/Re-use-Component/ProductShowComponent";
+import FilterNavbar from "../../components/Re-use-Component/CategoryFilterNavbar";
 
  
 

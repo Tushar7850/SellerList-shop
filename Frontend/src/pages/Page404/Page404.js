@@ -1,54 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function PageNotFound() {
   return (
-    <div className='flex justify-center items-centerm p-20 flex-col text-center'>
-      <div class="py-10">
-  <div class="text-center">
-    <p class="text-base font-semibold text-black">404</p>
-    <h1 class="mt-2 text-3xl font-bold tracking-tight text-black sm:text-5xl">
-      Page not found
-    </h1>
-    <p class="mt-4 text-base leading-7 text-gray-600">
-      Sorry, we couldn't find the page you &#x27;re looking for.
-    </p>
-    <div class="mt-4 flex items-center justify-center gap-x-3">
-    <Link to={"/"}>
-    <button
-        type="button"
-        
-        class="inline-flex items-center rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          class="mr-2"
+    <div className="bg-gray-100 w-full -mt-3 px-16 md:px-0 h-screen flex items-center justify-center">
+      <div className="bg-white border border-gray-200 flex flex-col items-center justify-center px-4 md:px-8 lg:px-24 py-8 rounded-lg shadow-2xl">
+        <p className="text-6xl md:text-7xl lg:text-9xl font-bold tracking-wider text-gray-300">
+          404
+        </p>
+        <p className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-wider text-gray-500 mt-4">
+          Page Not Found
+        </p>
+        <p className="text-gray-500 mt-4 pb-4 border-b-2 text-center">
+          Sorry, the page you are looking for could not be found.
+        </p>
+        <Link
+          to={"/"}
+          className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-6 rounded transition duration-150"
+          title="Return Home"
         >
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-       Home Page
-      </button></Link> 
-      <button
-        type="button"
-        class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-      >
-        Contact us
-      </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>Return Home</span>
+        </Link>
+      </div>
     </div>
-  </div>
-</div>
-
-     
-      
-    </div>
-  )
+  );
 }

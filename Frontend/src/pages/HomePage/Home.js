@@ -10,10 +10,10 @@ import { FaLock } from "react-icons/fa";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 // Images
-import descimg2 from "../../Assets/dis-img2.jpg";
-import descimg3 from "../../Assets/dis-img3.jpg";
-import descimg4 from "../../Assets/dis-img4.jpg";
-import descimg5 from "../../Assets/dis-img5.jpg";
+import descImg2 from "../../Assets/dis-img2.jpg";
+import descImg3 from "../../Assets/dis-img3.jpg";
+import descImg4 from "../../Assets/dis-img4.jpg";
+import descImg5 from "../../Assets/dis-img5.jpg";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -39,13 +39,12 @@ export default function Home() {
   const navigate = useNavigate();
 
   const images = [
-    { url: descimg2, alt: "Product showcase 1" },
-    { url: descimg3, alt: "Product showcase 2" },
-    { url: descimg4, alt: "Product showcase 3" },
-    { url: descimg5, alt: "Product showcase 4" },
+    { url: descImg2, alt: "Product showcase 1" },
+    { url: descImg3, alt: "Product showcase 2" },
+    { url: descImg4, alt: "Product showcase 3" },
+    { url: descImg5, alt: "Product showcase 4" },
   ];
 
-  // Custom arrow components - simplified and using Tailwind classes
   const CustomNextArrow = ({ onClick }) => (
     <button
       onClick={onClick}
@@ -66,11 +65,10 @@ export default function Home() {
     </button>
   );
 
-  // Optimized slider settings
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -111,11 +109,11 @@ export default function Home() {
         <div className="slider-container">
           <Slider {...settings}>
             {images.map((image, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="px-10">
                 <img
                   src={image.url}
                   alt={image.alt}
-                  className="w-full h-64 object-fill rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105"
+                  className="w-full h-96 object-fill rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105"
                   onClick={() => navigate("/womenswear")}
                 />
               </div>
@@ -148,7 +146,7 @@ export default function Home() {
         />
       </section>
 
-      {/* <ShopItemsHomePage /> */}
+      <ShopItemsHomePage />
     </div>
   );
 }

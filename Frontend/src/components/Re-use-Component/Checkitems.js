@@ -7,8 +7,9 @@ import { GiReturnArrow } from "react-icons/gi";
 import Rating from "@mui/material/Rating";
 import { useLocation } from "react-router-dom";
 import { CardContext } from "../../Context/CardContext/CardContext";
+import useLocationByIP from "../useLocationByIP";
 
-export default function Checkitems() {
+export default function CheckItems() {
   //
   const location = useLocation();
   const selectedProduct = location.state;
@@ -22,6 +23,10 @@ export default function Checkitems() {
     setUniqueProduct({ ...uniqueProduct, size: size });
   };
 
+  const userLocation = useLocationByIP();
+
+  console.log("userLocation", userLocation);
+
   return (
     <div className="px-5 mt-5 w-screen pb-10">
       <div className="lg:flex ">
@@ -29,29 +34,49 @@ export default function Checkitems() {
         <div className=" h-full lg:h-[23rem] w-full  lg:ml-10 lg:-mr-20 ">
           {/*IMAGE 1 & 2   */}
 
-          <div className="flex py-2  h-full lg:ml-5 ">
+          <div className="flex py-2  h-full  ">
             {/* IMAGE__1  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={uniqueProduct.main_img} alt="" />
+              <img
+                src={uniqueProduct.main_img}
+                alt="image"
+                className="w-[18rem]"
+              />
             </div>
             {/* IMAGE__2  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={uniqueProduct.item_img_1} alt="" />
+              <img
+                src={uniqueProduct.item_img_1}
+                alt="image"
+                className="w-[18rem]"
+              />
             </div>
           </div>
 
           <div className="flex  h-full lg:h-[250px]">
             {/* IMAGE__3  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={uniqueProduct.item_img_2} alt="" />
+              <img
+                src={uniqueProduct.item_img_2}
+                alt="image"
+                className="w-[12rem]"
+              />
             </div>
             {/* IMAGE__4  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={uniqueProduct.item_img_3} alt="" />
+              <img
+                src={uniqueProduct.item_img_3}
+                alt="image"
+                className="w-[12rem]"
+              />
             </div>
             {/* IMAGE__5  */}
             <div className="border-zinc-400 border-2 rounded-lg mx-1 overflow-hidden flex justify-center">
-              <img src={uniqueProduct.item_img_4} alt="" />
+              <img
+                src={uniqueProduct.item_img_4}
+                alt="image"
+                className="w-[12rem]"
+              />
             </div>
           </div>
         </div>
@@ -130,7 +155,7 @@ export default function Checkitems() {
               <img
                 src="https://www.gurpreetsaluja.com/wp-content/uploads/2020/09/HDFC-LOGO.png"
                 className="w-7 h-7"
-                alt=""
+                alt="image"
               />
               <p className="text-xs text-black pl-2 lg:text-base">
                 Up to 5% NeuCoins on HDFC Bank Credit Cards | No Promo Code
@@ -141,7 +166,7 @@ export default function Checkitems() {
               <img
                 src="https://static.shoplightspeed.com/shops/606983/files/001201947/10percentoff.png"
                 className="w-7 h-7"
-                alt=""
+                alt="image"
               />
               <p className="text-xs text-black pl-2 lg:text-base">
                 10% Instant Discount on OneCard Credit Card only
@@ -151,7 +176,7 @@ export default function Checkitems() {
               <img
                 src="https://companieslogo.com/img/orig/AXISBANK.BO-8f59e95b.png"
                 className="w-7 h-7 p-0.5"
-                alt=""
+                alt="image"
               />
               <p className="text-xs text-black pl-2 lg:text-base">
                 Get 10% discount on Axis Bank Credit Cards.
@@ -172,6 +197,11 @@ export default function Checkitems() {
                 placeholder="Pincode"
                 className="outline-none w-1/2 text-black"
                 id="Pincode"
+                value={
+                  userLocation && userLocation.pincode
+                    ? userLocation.pincode
+                    : ""
+                }
               />
               <h4 className="text-sm text-red-500 p-2 cursor-pointer ">
                 Change Pincode

@@ -12,14 +12,14 @@ import SignUpPage from "../pages/RegisterPages/SignUp";
 import Allmenswear from "../Api/MenswearApi";
 import allwomenswear from "../Api/WomensApi";
 import AllKidsWear from '../Api/kidswearApi';
-import Allshoes from "../Api/ShoesApi";
-import ShoesPage from "../pages/ShoesPage";
-import Womenspage from "../pages/WomensPage";
-import KidsPage from "../pages/KidsPage";
-import MensPage from "../pages/MensPage";
+import AllShoes from "../Api/ShoesApi";
+import ShoesPage from "../pages/ShopingPages/ShoesPage";
+import Womenspage from "../pages/ShopingPages/WomensPage";
+import KidsPage from "../pages/ShopingPages/KidsPage";
+import MensPage from "../pages/ShopingPages/MensPage";
 import Home from "../pages/HomePage/Home";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import Checkitems from "../components/Re-use-Component/Checkitems";
+import CheckItems from "../components/Re-use-Component/CheckItems";
 import Page404 from "../pages/Page404/Page404";
 import Cart from "../pages/Cart/Cart";
 import ContactUs from '../pages/FooterPages/ContactUs';
@@ -47,13 +47,13 @@ function Routingpage() {
         <Route path="/sign-up" element={<SignUpPage/>}/>
 
         {/* Product routes */}
-        <Route path="/shoes" element={<ShoesPage ProductApi={Allshoes}/>}/>
+        <Route path="/shoes" element={<ShoesPage ProductApi={AllShoes}/>}/>
         <Route path="/menswear" element={<MensPage ProductApi={Allmenswear}/>}/>
         <Route path="/womenswear" element={<Womenspage ProductApi={allwomenswear}/>}/>
         <Route path="/kidswear" element={<KidsPage ProductApi={AllKidsWear}/>}/>
 
         {/* Other routes */}
-        <Route path="/productdetails" element={<Checkitems/>}/>
+        <Route path="/productDetails" element={<CheckItems/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/checkoutpage" element={<Checkoutpage/>}/>
 

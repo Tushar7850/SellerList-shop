@@ -10,7 +10,7 @@ import Hamburger from "hamburger-react";
 import allwomenswear from "../../Api/WomensApi";
 import Allmenswear from "../../Api/MenswearApi";
 import AllKidsWear from "../../Api/kidswearApi";
-import Allshoes from "../../Api/ShoesApi";
+import AllShoes from "../../Api/ShoesApi";
 //
 
 
@@ -121,7 +121,7 @@ function Navbar() {
                   Kidswear
                 </li>
               </Link>
-              <Link to={"/shoes"} state={Allshoes}>
+              <Link to={"/shoes"} state={AllShoes}>
                 {" "}
                 <li
               className={slide ? 'p-3 border-b-2  border-cyan-200  ':"cursor-pointer rounded-xl  p-2 hover:font-bold hover:bg-cyan-500 hover:text-white hover:border "}

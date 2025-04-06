@@ -6,6 +6,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+*{
+  user-select: none;
+}
+
 /* --------------slider-container--------------- */
 
 .slick-prev,
@@ -20,3 +24,6 @@ body {
 .slick-dots li button:before {
   font-size: 12px;
 }
+
+
+

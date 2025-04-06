@@ -1,8 +1,6 @@
-
-const Allmenswear = 
-{
-  ApiCategory:"Menswear",
-  ApiData:[
+const Allmenswear = {
+  ApiCategory: "Menswear",
+  ApiData: [
     {
       id: 21,
       name: " Dark Olive Regular Fit Cotton Shirt",
@@ -17,11 +15,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854587_437Wx649H_202303151507335.jpeg",
       price: 679,
-      old_price: "₹3399",
+      old_price: "3399",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
-     
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 22,
@@ -37,10 +34,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854452_437Wx649H_202303151502205.jpeg",
       price: 679,
-      old_price: "₹3399",
+      old_price: "3399",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 23,
@@ -56,10 +53,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854606_437Wx649H_202303151508325.jpeg",
       price: 719,
-      old_price: "₹3599",
+      old_price: "3599",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 24,
@@ -75,11 +72,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011285060_437Wx649H_202111280548315.jpeg",
       price: 2399,
-      old_price: "₹3999",
+      old_price: "3999",
       price_off: "40% Off",
-     category: "Jacket",
-      rating:2.9,
-     
+      category: "Jacket",
+      rating: 2.9,
     },
     {
       id: 25,
@@ -95,13 +91,13 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i13/437Wx649H/MP000000019410648_437Wx649H_202309260147283.jpeg",
       price: 1499,
-      old_price: "₹2999",
+      old_price: "2999",
       price_off: "50% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
-      id:26,
+      id: 26,
       name: " Leather Retail Brown Full Sleeves Jacket",
       main_img:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011285012_437Wx649H_202111280546001.jpeg",
@@ -114,14 +110,14 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011285012_437Wx649H_202111280546065.jpeg",
       price: 2699,
-      old_price: "₹3999",
+      old_price: "3999",
       price_off: "33% Off",
-     category: "Jacket",
-      rating:2.9,
+      category: "Jacket",
+      rating: 2.9,
     },
-    
+
     {
-      id:27,
+      id: 27,
       name: "Westside White Zig Zag Printed Relaxed Fit Shirt",
       main_img:
         "https://img.tatacliq.com/images/i14/437Wx649H/MP000000019563746_437Wx649H_202310081148081.jpeg",
@@ -137,11 +133,11 @@ const Allmenswear =
       old_price: "",
       Stock: "Limited Stock!",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
-      id:28,
+      id: 28,
       name: " Light Yellow Fit Cotton Shirt",
       main_img:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854348_437Wx649H_202303151458131.jpeg",
@@ -154,10 +150,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016854348_437Wx649H_202303151458115.jpeg",
       price: 679,
-      old_price: "₹3399",
+      old_price: "3399",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 29,
@@ -173,12 +169,12 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011284869_437Wx649H_202111280538245.jpeg",
       price: 2399,
-      old_price: "₹3999",
+      old_price: "3999",
       price_off: "40% Off",
-     category: "Jacket",
-      rating:2.9,
+      category: "Jacket",
+      rating: 2.9,
     },
-   
+
     {
       id: 30,
       name: " Navy Regular Fit Cotton Shirt",
@@ -193,10 +189,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016361187_437Wx649H_202302032329065.jpeg",
       price: 679,
-      old_price: "₹3399",
+      old_price: "3399",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 31,
@@ -215,8 +211,8 @@ const Allmenswear =
       old_price: "",
       Stock: "Limited Stock!!",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 32,
@@ -232,12 +228,12 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011284957_437Wx649H_202111280543135.jpeg",
       price: 2099,
-      old_price: "₹3999",
+      old_price: "3999",
       price_off: "48% Off",
-     category: "Jacket",
-      rating:2.9,
+      category: "Jacket",
+      rating: 2.9,
     },
- 
+
     {
       id: 33,
       name: "Sutra Navy Solid Windcheater Bomber Jacket",
@@ -252,11 +248,11 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612662_437Wx649H_202112302141315.jpeg",
       price: 800,
-      old_price: "₹1999",
+      old_price: "1999",
       Stock: "",
       price_off: "60% Off",
-     category: "Jacket",
-      rating:2.9,
+      category: "Jacket",
+      rating: 2.9,
     },
     {
       id: 34,
@@ -272,10 +268,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i8/437Wx649H/MP000000013801964_437Wx649H_202207160616295.jpeg",
       price: 679,
-      old_price: "₹3399",
+      old_price: "3399",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 35,
@@ -291,10 +287,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017999211_437Wx649H_202306171934235.jpeg",
       price: 1859,
-      old_price: "₹2999",
+      old_price: "2999",
       price_off: "38% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 36,
@@ -310,10 +306,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016521121_437Wx649H_202302141654575.jpeg",
       price: 1428,
-      old_price: "₹2599",
+      old_price: "2599",
       price_off: "45% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 37,
@@ -329,10 +325,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i12/437Wx649H/MP000000018435761_437Wx649H_202307231752215.jpeg",
       price: 3044,
-      old_price: "₹3499",
+      old_price: "3499",
       price_off: "13% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 38,
@@ -348,10 +344,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011598309_437Wx649H_202112291745535.jpeg",
       price: 1299,
-      old_price: "₹2599",
+      old_price: "2599",
       price_off: "50% Off",
-     category: "Jacket",
-      rating:2.9,
+      category: "Jacket",
+      rating: 2.9,
     },
     {
       id: 39,
@@ -367,10 +363,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016907311_437Wx649H_202303181804165.jpeg",
       price: 895,
-      old_price: "₹2799",
+      old_price: "2799",
       price_off: "68% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 40,
@@ -386,12 +382,12 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i10/437Wx649H/MP000000017193988_437Wx649H_202304132040115.jpeg",
       price: 1996,
-      old_price: "₹2495",
+      old_price: "2495",
       price_off: "20% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
-    
+
     {
       id: 41,
       name: "Maroon Cotton Regular Fit Checks Shirt",
@@ -408,8 +404,8 @@ const Allmenswear =
       price: 3199,
       Stock: "Limited Stock!",
       price_off: "60% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 42,
@@ -427,8 +423,8 @@ const Allmenswear =
       price: 2999,
       Stock: "Limited Stock!",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 43,
@@ -444,10 +440,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011598228_437Wx649H_202112291741385.jpeg",
       price: 2639,
-      old_price: "₹4399",
+      old_price: "4399",
       price_off: "40% Off",
-     category: "Jacket",
-      rating:2.9,
+      category: "Jacket",
+      rating: 2.9,
     },
     {
       id: 44,
@@ -463,10 +459,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i14/437Wx649H/MP000000019827161_437Wx649H_202310271648385.jpeg",
       price: 952,
-      old_price: "₹2380",
+      old_price: "2380",
       price_off: "60% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 45,
@@ -482,10 +478,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191655_437Wx649H_202211060047195.jpeg",
       price: 1839,
-      old_price: "₹2299",
+      old_price: "2299",
       price_off: "20% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 46,
@@ -501,10 +497,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i13/437Wx649H/MP000000019345428_437Wx649H_202309221412155.jpeg",
       price: 2319,
-      old_price: "₹2899",
+      old_price: "2899",
       price_off: "20% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
       id: 47,
@@ -520,10 +516,10 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i7/437Wx649H/MP000000011612517_437Wx649H_202112302133015.jpeg",
       price: 1400,
-      old_price: "₹3999",
+      old_price: "3999",
       price_off: "65% Off",
-     category: "Jacket",
-      rating:2.9,
+      category: "Jacket",
+      rating: 2.9,
     },
     {
       id: 48,
@@ -539,53 +535,48 @@ const Allmenswear =
       item_img_4:
         "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544125.jpeg",
       price: 679,
-      old_price: "₹3399",
+      old_price: "3399",
       price_off: "80% Off",
-     category: "Shirt",
-      rating:2.9,
+      category: "Shirt",
+      rating: 2.9,
     },
     {
-        id: 49,
-        name: "T-shirt",
-        main_img:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544161.jpeg",
-        item_img_1:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543532.jpeg",
-        item_img_2:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543503.jpeg",
-        item_img_3:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543564.jpeg",
-        item_img_4:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544125.jpeg",
-        price: 679,
-        old_price: "₹3399",
-        price_off: "80% Off",
-        category: "T-Shirt",
-      },
-      {
-        id: 50,
-        name: "Pants",
-        main_img:
-          "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191655_437Wx649H_202211060047171.jpeg",
-        item_img_1:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543532.jpeg",
-        item_img_2:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543503.jpeg",
-        item_img_3:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543564.jpeg",
-        item_img_4:
-          "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544125.jpeg",
-        price: 679,
-        old_price: "₹3399",
-        price_off: "80% Off",
-        category: "Pants",
-      },
-      
-    
-  ]
-}
+      id: 49,
+      name: "T-shirt",
+      main_img:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544161.jpeg",
+      item_img_1:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543532.jpeg",
+      item_img_2:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543503.jpeg",
+      item_img_3:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543564.jpeg",
+      item_img_4:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544125.jpeg",
+      price: 679,
+      old_price: "3399",
+      price_off: "80% Off",
+      category: "T-Shirt",
+    },
+    {
+      id: 50,
+      name: "Pants",
+      main_img:
+        "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191655_437Wx649H_202211060047171.jpeg",
+      item_img_1:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543532.jpeg",
+      item_img_2:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543503.jpeg",
+      item_img_3:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161543564.jpeg",
+      item_img_4:
+        "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016551529_437Wx649H_202302161544125.jpeg",
+      price: 679,
+      old_price: "3399",
+      price_off: "80% Off",
+      category: "Pants",
+    },
+  ],
+};
 
-
-  export default Allmenswear ;
-  
-
+export default Allmenswear;

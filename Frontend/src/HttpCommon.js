@@ -1,0 +1,1 @@
+export const CommonApiUrl ="http://localhost:5000";

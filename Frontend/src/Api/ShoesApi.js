@@ -1,6 +1,6 @@
 
 
-    const Allshoes={
+    const AllShoes={
     ApiCategory:"Shoes",
     ApiData: [
         {
@@ -12,7 +12,7 @@
             item_img_3:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000017861333_437Wx649H_202306080142405.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000017861333_437Wx649H_202306080142426.jpeg",
             price:1399,
-            old_price:"₹5599",
+            old_price:"5599",
             price_off:"75% Off",
             category:"Mens",
            
@@ -26,7 +26,7 @@
             item_img_3:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000017861338_437Wx649H_202306080142524.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000017861338_437Wx649H_202306080142465.jpeg",
             price:1119,
-            old_price:"₹5599",
+            old_price:"5599",
             price_off:"80% Off",
             category:"Mens",
            
@@ -40,7 +40,7 @@
             item_img_3:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000019298736_437Wx649H_202309171315094.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000019298736_437Wx649H_202309171314555.jpeg",
             price:1770,
-            old_price:"₹5899",
+            old_price:"5899",
             price_off:"70% Off",
             category:"Mens",
            
@@ -54,7 +54,7 @@
             item_img_3:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016613562_437Wx649H_202302211708324.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016613562_437Wx649H_202302211708345.jpeg",
             price:1159,
-            old_price:"₹5799",
+            old_price:"5799",
             price_off:"80% Off",
             category:"Mens",
            
@@ -68,7 +68,7 @@
             item_img_3:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016613520_437Wx649H_202302211706354.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016613520_437Wx649H_202302211706365.jpeg",
             price:1119,
-            old_price:"₹5599",
+            old_price:"5599",
             price_off:"80% Off",
             category:"Mens",
            
@@ -82,7 +82,7 @@
             item_img_3:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000019198775_437Wx649H_202309130159414.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000019198775_437Wx649H_202309130159405.jpeg",
             price:1680,
-            old_price:"₹5599",
+            old_price:"5599",
             price_off:"70% Off",
             category:"Mens",
            
@@ -96,7 +96,7 @@
             item_img_3:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000017861355_437Wx649H_202306080143414.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000017861355_437Wx649H_202306080143435.jpeg",
             price:1119,
-            old_price:"₹5599",
+            old_price:"5599",
             price_off:"80% Off",
             category:"Mens",
            
@@ -110,7 +110,7 @@
             item_img_3:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000018915339_437Wx649H_202308252221554.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000018915339_437Wx649H_202308252221515.jpeg",
             price:1419,
-            old_price:"₹7099",
+            old_price:"7099",
             price_off:"80% Off",
             category:"Mens",
            
@@ -124,21 +124,21 @@
             item_img_3:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018349087_437Wx649H_202307152350214.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018349087_437Wx649H_202307152350245.jpeg",
             price:1099,
-            old_price:"₹5499",
+            old_price:"5499",
             price_off:"80% Off",
             category:"Mens",
            
         },
         {
             id:60,
-            name:"Men's Flexrate Black Casual Sneakers",
+            name:"Men's Flex rate Black Casual Sneakers",
             main_img:'https://img.tatacliq.com/images/i12/437Wx649H/MP000000018866787_437Wx649H_202308221800471.jpeg',
             item_img_1:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018866787_437Wx649H_202308221800492.jpeg",
             item_img_2:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018866787_437Wx649H_202308221800503.jpeg",
             item_img_3:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018866787_437Wx649H_202308221800514.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018866787_437Wx649H_202308221800485.jpeg",
             price:1479,
-            old_price:"₹4499",
+            old_price:"4499",
             price_off:"67% Off",
             category:"Mens",
            
@@ -152,7 +152,7 @@
             item_img_3:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018253518_437Wx649H_202307071909374.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018253518_437Wx649H_202307071909385.jpeg",
             price:1139,
-            old_price:"₹5699",
+            old_price:"5699",
             price_off:"80% Off",
             category:"Mens",
            
@@ -166,7 +166,7 @@
             item_img_3:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018253475_437Wx649H_202307071907524.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018253475_437Wx649H_202307071907535.jpeg",
             price:1199,
-            old_price:"₹5599",
+            old_price:"5599",
             price_off:"80% Off",
             category:"Mens",
            
@@ -180,7 +180,7 @@
             item_img_3:"https://img.tatacliq.com/images/i9/437Wx649H/MP000000016283449_437Wx649H_202301300621054.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i9/437Wx649H/MP000000016283449_437Wx649H_202301300620555.jpeg",
             price:2019,
-            old_price:"₹4499",
+            old_price:"4499",
             price_off:"55% Off",
             category:"Mens",
            
@@ -194,7 +194,7 @@
             item_img_3:"https://img.tatacliq.com/images/i7/437Wx649H/MP000000008500221_437Wx649H_202112101748404.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i7/437Wx649H/MP000000008500221_437Wx649H_202112101748425.jpeg",
             price:1999,
-            old_price:"₹4999",
+            old_price:"4999",
             price_off:"60% Off",
             category:"Mens",
            
@@ -208,7 +208,7 @@
             item_img_3:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018432253_437Wx649H_202307230204014.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i12/437Wx649H/MP000000018432253_437Wx649H_202307230204045.jpeg",
             price:2147,
-            old_price:"₹4295",
+            old_price:"4295",
             price_off:"50% Off",
             category:"Mens",
            
@@ -222,21 +222,21 @@
             item_img_3:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000014696851_437Wx649H_202306020454094.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i11/437Wx649H/MP000000014696851_437Wx649H_202306020454135.jpeg",
             price:3120,
-            old_price:"₹4799",
+            old_price:"4799",
             price_off:"35% Off",
             category:"Mens",
            
         },
         {
             id:67,
-            name:"Men's Sheffle V3 Better White Casual Sneakers",
+            name:"Men's shuffle V3 Better White Casual Sneakers",
             main_img:'https://img.tatacliq.com/images/i10/437Wx649H/MP000000016764387_437Wx649H_202303052132311.jpeg',
             item_img_1:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016764387_437Wx649H_202303052132222.jpeg",
             item_img_2:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016764387_437Wx649H_202303052132183.jpeg",
             item_img_3:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016764387_437Wx649H_202303052132264.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i10/437Wx649H/MP000000016764387_437Wx649H_202303052132365.jpeg",
             price:1399,
-            old_price:"₹5599",
+            old_price:"5599",
             price_off:"75% Off",
             category:"Mens",
            
@@ -250,7 +250,7 @@
             item_img_3:"https://img.tatacliq.com/images/i14/437Wx649H/MP000000019926469_437Wx649H_202311022128064.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i14/437Wx649H/MP000000019926469_437Wx649H_202311022128035.jpeg",
             price:1871,
-            old_price:"₹2495",
+            old_price:"2495",
             price_off:"25% Off",
             category:"Mens",
            
@@ -264,7 +264,7 @@
             item_img_3:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000019353289_437Wx649H_202309222310164.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i13/437Wx649H/MP000000019353289_437Wx649H_202309222310195.jpeg",
             price:1799,
-            old_price:"₹4499",
+            old_price:"4499",
             price_off:"60% Off",
             category:"Mens",
            
@@ -278,7 +278,7 @@
             item_img_3:"https://img.tatacliq.com/images/i8/437Wx649H/MP000000013222113_437Wx649H_202205221249454.jpeg",
             item_img_4:"https://img.tatacliq.com/images/i8/437Wx649H/MP000000013222113_437Wx649H_202205221249391.jpeg",
             price:1039,
-            old_price:"₹5199",
+            old_price:"5199",
             price_off:"80% Off",
             category:"Mens",
            
@@ -291,4 +291,4 @@
    
         
     
-  export default Allshoes
+  export default AllShoes;
