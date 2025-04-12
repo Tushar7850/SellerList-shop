@@ -1,15 +1,11 @@
-import { useEffect, useState } from "react";
-import Routingpage from "./Route/Routingpage";
-import Spinner from "./components/Spinner/Spinner";
-import AddProducts from "./components/addProducts/AddProducts";
+import React from 'react'
 
 function App() {
   return (
-    <div className="w-full overflow-hidden">
-      {/* <Routingpage /> */}
-      <AddProducts/>
+    <div>
+      ddd
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
