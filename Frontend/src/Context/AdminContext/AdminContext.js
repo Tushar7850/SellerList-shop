@@ -32,6 +32,7 @@ function AdminContextProvider({ children }) {
   const value = {
     logout,
     user,
+    setUser
   };
 
   return (

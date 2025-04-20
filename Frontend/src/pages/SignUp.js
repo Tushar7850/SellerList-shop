@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,6 +11,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import toast from 'react-hot-toast';
 import Spinner from '../components/Spinner/Spinner';
 import { CommonApiUrl } from '../HttpCommon';
+import { AdminContext } from '../Context/AdminContext/AdminContext';
 
 // ✅ Yup schema for validation
 const schema = yup.object().shape({
@@ -24,6 +25,8 @@ export default function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const { user, logout, setUser } = useContext(AdminContext);
 
   const {
     register,
@@ -44,6 +47,7 @@ export default function SignUpPage() {
       });
 
       localStorage.setItem("userInfo", JSON.stringify(data));
+      setUser(data);
       Swal.fire({
         title: "Good job!",
         text: "Your account has been created!",

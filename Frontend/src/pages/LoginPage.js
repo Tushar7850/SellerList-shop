@@ -1,30 +1,35 @@
-import React, { useState, useContext } from 'react';
-import { AdminContext } from '../Context/AdminContext/AdminContext'; // Make sure the path is correct
-import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import toast from 'react-hot-toast';
-import Spinner from '../components/Spinner/Spinner';
-import { CommonApiUrl } from '../HttpCommon';
+import React, { useState, useContext } from "react";
+import { AdminContext } from "../Context/AdminContext/AdminContext"; // Make sure the path is correct
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import toast from "react-hot-toast";
+import Spinner from "../components/Spinner/Spinner";
+import { CommonApiUrl } from "../HttpCommon";
 
 // ✅ Yup schema
 const schema = yup.object().shape({
-  email: yup.string().email('Invalid email format').required('Email is required'),
-  password: yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+  email: yup
+    .string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  password: yup
+    .string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
 });
 
 export default function LoginPage() {
-  const { user, logout } = useContext(AdminContext);  // Access context for authentication state
+  const { user, logout, setUser } = useContext(AdminContext);
   const [showPassword, setShowPassword] = useState(true);
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
-  // ✅ useForm hook with yup resolver
   const {
     register,
     handleSubmit,
@@ -37,9 +42,12 @@ export default function LoginPage() {
     setLoading(true);
     try {
       const response = await axios.post(`${CommonApiUrl}/api/auth/login`, data);
-      localStorage.setItem('userInfo', JSON.stringify(response.data));
+      const userData = response.data;
+
+      localStorage.setItem("userInfo", JSON.stringify(userData));
+      setUser(userData);
       toast.success("Login successful");
-      navigate('/');
+      navigate("/");
     } catch (error) {
       toast.error(error.response?.data?.message || "Login failed");
     }
@@ -64,14 +72,21 @@ export default function LoginPage() {
           {/* Login form */}
           <div className="flex w-screen flex-col md:w-6/12">
             <div className="flex justify-center pt-12 md:-mb-24 md:justify-start md:pl-12">
-              <h1 className="border-b-gray-700 border-b-4 pb-2 text-2xl font-bold text-gray-900">SellerList.</h1>
+              <h1 className="border-b-gray-700 border-b-4 pb-2 text-2xl font-bold text-gray-900">
+                SellerList.
+              </h1>
             </div>
 
             <div className="lg:w-[28rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">
               <p className="text-left text-3xl font-bold">Welcome back</p>
-              <p className="mt-2 text-left text-gray-500">Please enter your details to log in.</p>
+              <p className="mt-2 text-left text-gray-500">
+                Please enter your details to log in.
+              </p>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col pt-3 md:pt-8">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="flex flex-col pt-3 md:pt-8"
+              >
                 {/* Email Field */}
                 <div className="flex flex-col pt-4">
                   <div className="focus-within:border-b-gray-500 relative flex overflow-hidden border-b-2 transition">
@@ -82,7 +97,11 @@ export default function LoginPage() {
                       placeholder="Email"
                     />
                   </div>
-                  {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                  {errors.email && (
+                    <p className="text-red-500 text-sm">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
                 {/* Password Field */}
@@ -94,11 +113,23 @@ export default function LoginPage() {
                       className="w-full flex-1 appearance-none bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                       placeholder="Password"
                     />
-                    <button type="button" className="pr-2" onClick={() => setShowPassword(!showPassword)}>
-                      {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                    <button
+                      type="button"
+                      className="pr-2"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? (
+                        <VisibilityOffIcon />
+                      ) : (
+                        <VisibilityIcon />
+                      )}
                     </button>
                   </div>
-                  {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
+                  {errors.password && (
+                    <p className="text-red-500 text-sm">
+                      {errors.password.message}
+                    </p>
+                  )}
                 </div>
 
                 <button
@@ -111,7 +142,7 @@ export default function LoginPage() {
 
               <div className="py-12 text-center">
                 <p className="whitespace-nowrap text-gray-600">
-                  Don't have an account?{' '}
+                  Don't have an account?{" "}
                   <span className="underline-offset-4 font-semibold text-blue-500 underline">
                     <Link to="/sign-up">Sign up for free.</Link>
                   </span>

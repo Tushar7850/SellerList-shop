@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaHeart, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { CommonApiUrl } from "../../../HttpCommon";
+import { useNavigate } from "react-router-dom";
 
 function ShopItemsHomePage() {
   const [randomProducts, setRandomProducts] = useState([]);
 
+  const Navigate = useNavigate();
+
   useEffect(() => {
     const fetchRandomProducts = async () => {
       try {
-        const res = await axios.get(
-          `${CommonApiUrl}/products/random?count=4`
-        );
+        const res = await axios.get(`${CommonApiUrl}/products/random?count=4`);
         setRandomProducts(res.data);
       } catch (err) {
         console.error("Failed to fetch random products", err);
@@ -22,36 +23,54 @@ function ShopItemsHomePage() {
   }, []);
 
   return (
-    <div className="px-4 mt-2">
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl">Listed Recently</h2>
-        <div className="flex space-x-2">
-          <FaArrowLeft className="md:text-lg lg:text-2xl cursor-pointer" />
-          <FaArrowRight className="md:text-lg lg:text-2xl cursor-pointer" />
+    <div className="px-4 mt-6 md:px-10">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-2xl font-semibold text-gray-800">
+          Recently Listed
+        </h2>
+        <div className="flex gap-3 text-gray-600">
+          <FaArrowLeft
+            className="cursor-pointer hover:text-black transition"
+            title="Previous"
+          />
+          <FaArrowRight
+            className="cursor-pointer hover:text-black transition"
+            title="Next"
+          />
         </div>
       </div>
 
-      <div className="mt-2 grid grid-cols-2 md:grid-cols-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {randomProducts.map((item, i) => (
-          <div key={i} className="p-2">
-            <div className="overflow-hidden h-4/6 rounded-2xl border">
+          <div
+            key={i}
+            className="bg-white rounded-2xl border hover:shadow-lg transition-all duration-300 cursor-pointer"
+            onClick={()=>{
+            Navigate(`/productDetails/${item._id}`)
+            }}
+          >
+            <div className="overflow-hidden rounded-t-2xl h-48 md:h-96">
               <img
                 src={item.main_img}
-                alt="product"
-                className="w-full transition-all duration-300 hover:scale-110"
+                alt={item.name}
+                className="w-full h-full object-fit transition-transform duration-300 hover:scale-110"
               />
             </div>
 
-            <div className="mt-1 flex justify-between items-center">
-              <h4 className="text-zinc-500 mt-0.5 text-sm lg:text-xl">
+            <div className="p-3 flex flex-col justify-between">
+              <h4 className="text-sm md:text-base text-gray-600 truncate">
                 {item.name}
               </h4>
-              <div className="flex">
-                <h4 className="text-zinc-500 text-sm lg:text-xl">208</h4>
-                <FaHeart className="text-zinc-300 hover:text-red-600 md:text-xl lg:text-2xl" />
+              <div className="flex justify-between items-center mt-1">
+                <span className="text-lg font-semibold text-gray-900">
+                  ₹{item.price}
+                </span>
+                <div className="flex items-center space-x-1">
+                  <span className="text-sm text-gray-500">208</span>
+                  <FaHeart className="text-zinc-300 hover:text-red-500 cursor-pointer transition" />
+                </div>
               </div>
             </div>
-            <h2 className="font-bold text-lg">{item.price}</h2>
           </div>
         ))}
       </div>

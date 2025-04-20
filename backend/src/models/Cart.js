@@ -21,4 +21,12 @@ const cartSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+cartSchema.statics.clearCart = async function (userId) {
+  return this.findOneAndUpdate(
+    { userId }, 
+    { $set: { items: [] } },
+    { new: true }  // Return the updated document
+  );
+};
+
 module.exports = mongoose.model("Cart", cartSchema);

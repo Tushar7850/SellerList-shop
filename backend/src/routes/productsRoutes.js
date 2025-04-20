@@ -177,7 +177,6 @@ router.get("/product/:id", async (req, res) => {
     if (!product) {
       return res.status(404).json({ message: "Product not found" });
     }
-
     res.status(200).json(product);
   } catch (error) {
     console.error("Error fetching product by ID:", error.message);

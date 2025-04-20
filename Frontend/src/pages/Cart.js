@@ -17,11 +17,10 @@ export default function Cart() {
     removeUniqueProduct,
     CarttotalPrice,
     TotalShippingChrges,
+    loading,
   } = useContext(CardContext);
 
-
-  console.log("cartItemscartItemscartItems0",cartItems);
-  
+  console.log("cartItemscartItemscartItems0", cartItems);
 
   const CheckOut = () => {
     if (user) {
@@ -34,7 +33,12 @@ export default function Cart() {
 
   return (
     <div>
-      <section className="h-80% bg-gray-100 py-12">
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          <div className="animate-spin h-10 w-10 border-4 border-black border-t-transparent rounded-full"></div>
+        </div>
+      ) : (
+        <section className="h-80% bg-gray-100 py-12">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center">
             <h1 className="text-3xl font-semibold text-gray-900">Your Cart</h1>
@@ -114,7 +118,7 @@ export default function Cart() {
 
                             <div
                               className="absolute top-0 right-0 flex sm:bottom-0 sm:top-auto"
-                              onClick={() => removeUniqueProduct(i)}
+                              onClick={() => removeUniqueProduct(item._id,item.size)}
                             >
                               <button
                                 type="button"
@@ -139,6 +143,7 @@ export default function Cart() {
                             </div>
                           </div>
                         </li>
+                        <div className="border w-full "></div>
                       </>
                     ))}
                   </ul>
@@ -198,6 +203,10 @@ export default function Cart() {
           </div>
         </div>
       </section>
+      )
+      
+      }
+     
     </div>
   );
 }

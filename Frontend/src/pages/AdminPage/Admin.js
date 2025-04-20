@@ -58,12 +58,12 @@ function Admin({ user }) {
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
         >
-          <MenuItem onClick={handleCloseUserMenu}>
+          {/* <MenuItem onClick={handleCloseUserMenu}>
             <Link to={"/Profile"}>
               {" "}
               <Typography textAlign="center">Profile</Typography>
             </Link>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem onClick={handleCloseUserMenu}>
             <Link to={"/Account"}>
               {" "}

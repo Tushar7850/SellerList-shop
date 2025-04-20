@@ -8,7 +8,8 @@ import { CommonApiUrl } from "../../HttpCommon";
 function Hero() {
   const [productNames, setProductNames] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState({ name: "", id: null });
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,29 +25,32 @@ function Hero() {
     fetchProductNames();
   }, []);
 
-  // Filter product names based on search term
   const filteredProducts = productNames.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleSearch = () => {
-    if (selected) {
-      navigate(`/search?q=${encodeURIComponent(selected)}`);
+    if (selected && selected.id) {
+      navigate(`productDetails/${selected.id}`);
     }
   };
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
+    setSelected({ name: "", id: null });
   };
 
-  const handleItemSelect = (name) => {
-    setSelected(name);
-    setSearchTerm(name); // Populate input with selected value
+  const handleItemSelect = (name, id) => {
+    setSelected({ name, id });
+    setSearchTerm(name);
   };
-  console.log("filteredProductsfilteredProducts", filteredProducts);
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") handleSearch();
+  };
 
   return (
-    <div className="p-2 ">
+    <div className="p-2">
       <div
         className="rounded-xl h-60 w-full bg-cover bg-center text-center pt-10 mb-2 lg:h-[30rem]"
         style={{ backgroundImage: `url(${hero_bg})` }}
@@ -68,23 +72,24 @@ function Hero() {
               type="text"
               value={searchTerm}
               onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
               placeholder="Search for products"
-              className="w-full h-14 pl-6 pr-20 rounded-full border-2 border-white/20 bg-white/95 backdrop-blur-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
+              className="w-full h-14 pl-10  pr-20 rounded-full border-2 border-white/20 bg-white/95 backdrop-blur-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
             />
 
-            {searchTerm && !selected ? (
+            {searchTerm && !selected.id && (
               <ul className="absolute w-full bg-white shadow-lg max-h-60 overflow-auto mt-1 rounded-lg z-10">
                 {filteredProducts.map((product) => (
                   <li
                     key={product._id}
                     className="cursor-pointer hover:bg-sky-200 px-6 py-2"
-                    onClick={() => handleItemSelect(product.name)}
+                    onClick={() => handleItemSelect(product.name, product._id)}
                   >
                     {product.name}
                   </li>
                 ))}
               </ul>
-            ) : null}
+            )}
 
             <button
               onClick={handleSearch}
@@ -102,7 +107,7 @@ function Hero() {
             { name: "Shoes", path: "/shoes" },
             { name: "Men's clothes", path: "/menswear" },
             { name: "Kids clothes", path: "/kidswear" },
-            { name: "Hobbies", path: "/" },
+            // { name: "Hobbies", path: "/" },
           ].map((category) => (
             <Link
               key={category.name}

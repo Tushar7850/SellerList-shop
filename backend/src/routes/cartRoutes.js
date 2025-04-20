@@ -69,9 +69,10 @@ router.post("/add", async (req, res) => {
   }
 });
 
+
 // Update item quantity
 router.put("/update", async (req, res) => {
-  const { userId, productId, quantity } = req.body;
+  const { userId, productId, quantity, size } = req.body;
 
   if (quantity <= 0)
     return res.status(400).json({ error: "Quantity must be greater than 0" });
@@ -80,7 +81,22 @@ router.put("/update", async (req, res) => {
     const cart = await Cart.findOne({ userId });
     if (!cart) return res.status(404).json({ error: "Cart not found" });
 
-    const item = cart.items.find((item) => item.productId === productId);
+    // Fix the comparison
+    // const item = cart.items.find(
+    //   (item) =>
+    //     item.productId.toString() === productId.toString() &&
+    //     item.size === size
+    // );
+
+        const item = cart.items.find(
+      (item) =>
+        item._id.toString() === productId.toString() &&
+        item.size === size
+    );
+
+    console.log(item);
+    
+
     if (item) {
       item.quantity = quantity;
       await cart.save();
@@ -89,9 +105,11 @@ router.put("/update", async (req, res) => {
 
     res.status(404).json({ error: "Item not found in cart" });
   } catch (err) {
+    console.error("Update error:", err);
     res.status(500).json({ error: "Failed to update quantity" });
   }
 });
+
 
 // Remove item
 router.delete("/remove", async (req, res) => {
@@ -102,7 +120,7 @@ router.delete("/remove", async (req, res) => {
     if (!cart) return res.status(404).json({ error: "Cart not found" });
 
     cart.items = cart.items.filter(
-      (item) => item.productId.toString() !== productId.toString()
+      (item) => item._id.toString() !== productId.toString()
     );
     await cart.save();
     res.status(200).json({ items: cart.items });

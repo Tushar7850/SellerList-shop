@@ -8,10 +8,7 @@ import AboutUs from "./pages/FooterPages/AboutUs";
 import PrivacyPolicy from "./pages/FooterPages/PrivacyPolicy";
 import Careers from "./pages/FooterPages/Careers";
 
-import ShoesPage from "./pages/ShopingPages/ShoesPage";
-import Womenspage from "./pages/ShopingPages/WomensPage";
-import KidsPage from "./pages/ShopingPages/KidsPage";
-import MensPage from "./pages/ShopingPages/MensPage";
+
 import Home from "./pages/HomePage/Home";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
@@ -28,50 +25,62 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUp";
 import Checkoutpage from "./pages/Checkoutpage";
 import Cart from "./pages/Cart";
+import CategoriesPage from "./pages/ShopingPages/CategoriesPage";
+import OrderHistory from "./pages/OrderHistory";
 
 function App() {
   return (
     <div className="w-full overflow-hidden">
-     <div>
-      {/* Scroll to top component */}
-      <ScrollToTop />
+      <div>
+        {/* Scroll to top component */}
+        <ScrollToTop />
 
-      {/* Navbar */}
-      <div className="mb-24 md:mb-28">
-        <Navbar />
+        {/* Navbar */}
+        <div className="mb-24 md:mb-28">
+          <Navbar />
+        </div>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Page404 />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/sign-up" element={<SignUpPage />} />
+
+          {/* Product routes */}
+          <Route path="/shoes" element={<CategoriesPage pageName="Shoes" />} />
+          <Route
+            path="/menswear"
+            element={<CategoriesPage pageName="MensWear" />}
+          />
+          <Route
+            path="/womenswear"
+            element={<CategoriesPage pageName="WomensWear" />}
+          />
+          <Route
+            path="/kidswear"
+            element={<CategoriesPage pageName="KidsWear" />}
+          />
+
+          {/* Other routes */}
+          <Route path="/productDetails/:id" element={<CheckItems />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkoutpage" element={<Checkoutpage />} />
+
+          {/* Footer routes */}
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/Privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/TermsAndCondition" element={<TermsAndCondition />} />
+          <Route path="/customerService" element={<CustomerService />} />
+          {/* <Route path="/Profile" element={<Profile />} /> */}
+          <Route path="/Account" element={<Account />} />
+          <Route path="/OrderHistory" element={<OrderHistory />} />
+        </Routes>
+
+        {/* Footer */}
+        <Footer />
       </div>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Page404 />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
-
-        {/* Product routes */}
-        <Route path="/shoes" element={<ShoesPage />} />
-        <Route path="/menswear" element={<MensPage />} />
-        <Route path="/womenswear" element={<Womenspage />} />
-        <Route path="/kidswear" element={<KidsPage />} />
-
-        {/* Other routes */}
-        <Route path="/productDetails/:id" element={<CheckItems />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkoutpage" element={<Checkoutpage />} />
-
-        {/* Footer routes */}
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/Privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/TermsAndCondition" element={<TermsAndCondition />} />
-        <Route path="/customerService" element={<CustomerService />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Account" element={<Account />} />
-      </Routes>
-
-      {/* Footer */}
-      <Footer />
-    </div>
     </div>
   );
 }

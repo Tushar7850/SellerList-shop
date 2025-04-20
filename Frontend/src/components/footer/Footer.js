@@ -5,12 +5,17 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // ------------------
 
 function Footer() {
+
+  const location = useLocation()
+
+  console.log("locatuoiii ", location.pathname);
+  
   return (
-    <div>
+    <div className="pt-5">
       <footer className="bg-zinc-200  text-zinc-400 lg:flex lg:justify-between px-5 md:px-10  pt-5 py-4 ">
         {/*  */}
         <div>
