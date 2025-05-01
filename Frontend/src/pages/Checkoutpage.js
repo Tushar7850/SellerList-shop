@@ -12,6 +12,11 @@ import { useNavigate } from "react-router-dom";
 function Checkoutpage() {
   const { cartItems, CarttotalPrice, TotalShippingChrges,fetchCart } =
     useContext(CardContext);
+
+
+    console.log('====================================');
+    console.log("cartItems",cartItems);
+    console.log('====================================');
   const { user } = useContext(AdminContext);
   const navigate = useNavigate();
   const {

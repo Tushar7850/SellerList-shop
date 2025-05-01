@@ -25,7 +25,7 @@ function CardContextProvider({ children }) {
       setLoading(false);
     } catch (err) {
       console.error("Failed to load cart:", err);
-      toast.error("Failed to load cart");
+      toast.error("Failed to load cart"); 
       setLoading(false);
     }
   };
@@ -36,6 +36,7 @@ function CardContextProvider({ children }) {
 
   const handleAddProduct = async (product) => {
     setLoading(true);
+    if (!userId) return toast.error("Login first ...");
     if (!product.size) return toast.error("Select Size");
 
     // Check if item already exists in cart with the same size

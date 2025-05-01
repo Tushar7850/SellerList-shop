@@ -53,9 +53,10 @@ router.post("/", protect, async (req, res) => {
 // (Optional) Get orders for a user
 router.get("/:userId", protect, async (req, res) => {
   try {
+  
     const orders = await Order.find({ userId: req.params.userId })
       .sort({ createdAt: -1 })
-      .populate("items._id"); // Populate product details for each item
+      .populate("items.productId");
 
     res.status(200).json(orders);
   } catch (err) {
@@ -79,18 +80,19 @@ router.get("/details/:orderId", protect, async (req, res) => {
   }
 });
 
-
 router.delete("/:orderId", protect, async (req, res) => {
-    try {
-      const deletedOrder = await Order.findByIdAndDelete(req.params.orderId);
-      if (!deletedOrder) {
-        return res.status(404).json({ message: "Order not found" });
-      }
-  
-      res.status(200).json({ message: "Order deleted successfully" });
-    } catch (err) {
-      res.status(500).json({ message: "Failed to delete order", error: err.message });
+  try {
+    const deletedOrder = await Order.findByIdAndDelete(req.params.orderId);
+    if (!deletedOrder) {
+      return res.status(404).json({ message: "Order not found" });
     }
-  });
+
+    res.status(200).json({ message: "Order deleted successfully" });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ message: "Failed to delete order", error: err.message });
+  }
+});
 
 module.exports = router;

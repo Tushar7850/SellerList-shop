@@ -11,7 +11,7 @@ const isValidBase64Image = (str) => {
 router.get("/names", async (req, res) => {
   try {
     const names = await Product.find({}, "name");
-    console.log("names :",names);
+ 
     
     res.status(200).json(names); // [{ _id, name }]
   } catch (error) {

@@ -63,6 +63,10 @@ function OrderHistory() {
     fetchOrders();
   }, [user]);
 
+  console.log("====================================");
+  console.log("orders", orders);
+  console.log("====================================");
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-semibold mb-6">Your Order History</h1>
@@ -77,6 +81,18 @@ function OrderHistory() {
         <div>
           {orders.map((order) => (
             <div key={order._id} className="border-b-2 pb-4 mb-4">
+              <div className="flex gap-2">
+                {order &&
+                  order.items &&
+                  order.items?.map((item) => (
+                    <img
+                      src={item.productId?.main_img}
+                      alt={item.productId?.name}
+                      className="w-32 h-32 object-contain rounded-lg overflow-hidden border p-2"
+                    />
+                  ))}
+              </div>
+
               <h3 className="text-xl font-medium">Order ID: {order._id}</h3>
               <button
                 onClick={() => deleteOrder(order._id)}
@@ -118,3 +134,9 @@ function OrderHistory() {
 }
 
 export default OrderHistory;
+
+
+
+
+
+

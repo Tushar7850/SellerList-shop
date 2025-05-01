@@ -17,7 +17,7 @@ const cartSchema = new mongoose.Schema(
       ref: "User",
     },
     items: [cartItemSchema],
-  },
+  },  
   { timestamps: true }
 );
 
